@@ -33,6 +33,11 @@ var styleDestination    = './'; // Path to place the compiled CSS file.
 								// Defualt set to root folder.
 
 
+var styleCustomSRC            = './assets/sass/custom/*.scss'; // Path to main .scss file.
+var styleCustomDestination    = './css'; // Path to place the compiled CSS file.
+var styleCustomFile           = 'cma';  
+                                // Defualt set to root folder.
+
 var jsVendorSRC         = './assets/js/vendors/*.js'; // Path to JS vendors folder.
 var jsVendorDestination = './assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile        = 'vendors'; // Compiled JS vendors file name.
@@ -53,6 +58,7 @@ var imagesDestination	= './assets/img/'; // Destination folder of optimized imag
 var styleWatchFiles     = './assets/sass/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles  = './assets/js/vendors/*.js'; // Path to all vendors JS files.
 var customJSWatchFiles  = './assets/js/custom/*.js'; // Path to all custom JS files.
+var styleCustomWatchFiles = '/assets/sass/custom/*.scss';
 
 
 // Browsers you care about for autoprefixing.
@@ -177,6 +183,8 @@ gulp.task('styles', function () {
 });
 
 
+
+
 /**
  * Task: `vendorJS`.
  *
@@ -271,6 +279,7 @@ gulp.task( 'images', function() {
   */
  gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
  	gulp.watch( styleWatchFiles, [ 'styles' ] );
+    //gulp.watch( styleCustomWatchFiles, [ 'stylesCMA' ] );
  	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ]  );
  	gulp.watch( customJSWatchFiles, [ 'customJS', reload ]  );
  });
