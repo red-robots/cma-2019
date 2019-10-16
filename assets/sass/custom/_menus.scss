@@ -224,7 +224,7 @@ button.menu-toggle {
 	}
   
 	span {
-		@include burger(25px, 3px, 6px, #d2d2d2); // gray
+		@include burger(20px, 3px, 6px, #d2d2d2); // gray
 		position: absolute;
 		top: 50%;
 		left: 50%;

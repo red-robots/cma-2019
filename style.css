@@ -6417,7 +6417,7 @@ button.menu-toggle {
   z-index: 100002; }
   @media screen and (min-width: 600px) {
     .burger {
-      top: 30px; } }
+      top: 20px; } }
   .burger span {
     position: relative;
     margin-top: 9px;
@@ -6433,7 +6433,7 @@ button.menu-toggle {
     margin-top: -1.5px; }
     .burger span, .burger span::before, .burger span::after {
       display: block;
-      width: 25px;
+      width: 20px;
       height: 3px;
       background-color: #d2d2d2;
       outline: 1px solid transparent;
