@@ -3,6 +3,9 @@
  * Enqueue scripts and styles.
  */
 function bellaworks_scripts() {
+	wp_register_style( 'cma_bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.3', false);
+    wp_enqueue_style( 'cma_bootstrap');
+    
 	wp_enqueue_style( 'bellaworks-style', get_stylesheet_uri() );
 
 	wp_deregister_script('jquery');
@@ -27,7 +30,7 @@ function bellaworks_scripts() {
 
 	wp_enqueue_script( 
 		'font-awesome', 
-		'https://use.fontawesome.com/8f931eabc1.js', 
+		get_template_directory_uri() . '/assets/svg-with-js/js/fontawesome-all.js', 
 		array(), '20180424', 
 		true 
 	);
@@ -38,8 +41,7 @@ function bellaworks_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_register_style( 'cma_bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array());
-    wp_enqueue_style( 'cma_bootstrap');
+	
 }
 add_action( 'wp_enqueue_scripts', 'bellaworks_scripts' );
 
