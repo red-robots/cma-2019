@@ -14,7 +14,7 @@
             <p class="cma-paragraph-normal">
               Seasoned CMA managers help residential and commercial associations thrive with their management expertise and extensive network of skilled vendors.
           </p>
-          <div>
+          <div class="mb-3">
               <a href="#" class="cma-solid-bottom">
                 Request Information
             </a>
@@ -37,7 +37,7 @@
 
       <div class="col-md-3 mb-5">
         <div class="text-center">
-          <img src="images/HR-Services.jpg" alt="" class="img-circle">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/images/HR-Services.jpg" alt="" class="img-circle">
           <div class="mt-2">
             <span class="font-weight-bold service-title">HR</span>
         </div>
@@ -46,7 +46,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/IT-Services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/IT-Services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">IT</span>
     </div>
@@ -55,7 +55,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/legal-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/legal-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Administration</span>
     </div>
@@ -64,7 +64,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/training-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/training-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Training</span>
     </div>
@@ -73,7 +73,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/recruitment-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/recruitment-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Recruitment</span>
     </div>
@@ -82,7 +82,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/maintenance-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/maintenance-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Maintenance</span>
     </div>
@@ -92,7 +92,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/leasing-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/leasing-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Leasing</span>
     </div>
@@ -101,7 +101,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/transitions-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/transitions-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Transitions</span>
     </div>
@@ -110,7 +110,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/division-managers-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/division-managers-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Division Manager</span>
     </div>
@@ -119,7 +119,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/administration-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/administration-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Accounting</span>
     </div>
@@ -128,7 +128,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/executive-team-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/executive-team-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Executive Team</span>
     </div>
@@ -137,7 +137,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/lifestyle-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/lifestyle-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Lifestyle</span>
     </div>
@@ -146,7 +146,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/legal-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/legal-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Legal</span>
     </div>
@@ -155,7 +155,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/3rd-party-vendor-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/3rd-party-vendor-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">3rd Party Vendors</span>
     </div>
@@ -164,7 +164,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/risk-management-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/risk-management-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Risk Management</span>
     </div>
@@ -173,7 +173,7 @@
 
 <div class="col-md-3 mb-5">
     <div class="text-center">
-      <img src="images/vendor-management-services.jpg" alt="" class="img-circle">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/vendor-management-services.jpg" alt="" class="img-circle">
       <div class="mt-2">
         <span class="font-weight-bold service-title">Vendor Management</span>
     </div>
@@ -233,7 +233,7 @@
       <div class="row pt-4 pb-3">
           <div class="col-sm-4">
             <div class="cma-icon-holder">
-              <img src="images/section3_financial_mgt.png" alt="">
+              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section3_financial_mgt.png" alt="">
           </div>
           <div class="cma-sub-title text-white">
               Financial Management
@@ -244,7 +244,7 @@
       </div>
       <div class="col-sm-4">
         <div class="cma-icon-holder">
-          <img src="images/section3_daily_operations.png" alt="">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section3_daily_operations.png" alt="">
       </div>
       <div class="cma-sub-title text-white">
           Daily Operations
@@ -255,7 +255,7 @@
   </div>
   <div class="col-sm-4">
     <div class="cma-icon-holder">
-      <img src="images/section3_association.png" alt="">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section3_association.png" alt="">
   </div>
   <div class="cma-sub-title text-white">
       Association Management
@@ -284,7 +284,7 @@
 
   <div class="cma-center cma-why-container">
     <div class="cma-icon-black">
-      <img src="images/section4_focused.png" alt="">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section4_focused.png" alt="">
   </div>
   <div class="cma-title-dark">
       We are client focused
@@ -296,7 +296,7 @@
 
 <div class="cma-center cma-why-container">
     <div class="cma-icon-black">
-      <img src="images/section4_proactive.png" alt="">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section4_proactive.png" alt="">
   </div>
   <div class="cma-title-dark">
       We are proactive
@@ -308,7 +308,7 @@
 
 <div class=" cma-center cma-why-container">
     <div class="cma-icon-black">
-      <img src="images/section4_value_oriented.png" alt="">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section4_value_oriented.png" alt="">
   </div>
   <div class="cma-title-dark">
       We are value oriented.
@@ -322,7 +322,7 @@
 </div>
 </div>
 
-<div class="pt-5 pb-4" id="request_information">
+<div class="pt-5 pb-4 mb-5" id="request_information">
     <div class="container text-center">
       <div class="col-md-8 cma-center">
         <div class="cma-logo ">

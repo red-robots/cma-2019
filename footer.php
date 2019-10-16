@@ -75,14 +75,14 @@
               <ul class="list-group flex-md-row">
                 <li class="list-group-item">
                   <a href="">
-                    <img src="images/footer_linkedin.png" alt="">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/footer_linkedin.png" alt="">
                   </a>
                 </li>
                 <li class="list-group-item">
-                  <a href=""><img src="images/footer_facebook.png" alt=""></a>
+                  <a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/footer_facebook.png" alt=""></a>
                 </li>
                 <li class="list-group-item">
-                  <a href=""><img src="images/footer_twitter.png" alt=""></a>
+                  <a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/footer_twitter.png" alt=""></a>
                 </li>
               </ul>
             </div>
