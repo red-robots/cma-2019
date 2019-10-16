@@ -204,7 +204,9 @@ button.menu-toggle {
 		width: 50%;
 	}
 }
-/*  BURGER
+/*  
+
+
 ========================================== */
 // body.logged-in .burger {
 // 	top: 0px;
@@ -222,7 +224,7 @@ button.menu-toggle {
 	}
   
 	span {
-		@include burger(30px, 3px, 6px, #d2d2d2); // gray
+		@include burger(25px, 3px, 6px, #d2d2d2); // gray
 		position: absolute;
 		top: 50%;
 		left: 50%;
