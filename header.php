@@ -57,7 +57,7 @@
 		 			</div><!-- wrapper -->
 		 		</div>
 
-		 		</div>
+		 		
 
 		 	</div>
 		 </header><!-- #masthead -->

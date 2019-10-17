@@ -10,16 +10,21 @@
             </div>
 
             <!-- Helping Communities -->
-            
+            <?php
+                $row1_title     = get_field('title');
+                $row1_text      = get_field('text');
+                $row1_btn_text  = get_field('button_name');
+                $row1_btn_link  = get_field('button_link');
+            ?>
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-8 text-center">
-                    <h1 class="cma-title-red">Helping Communities Thrive</h1>
+                    <h1 class="cma-title-red"><?php  echo $row1_title; ?></h1>
                     <p class="cma-paragraph-normal">
-                        Seasoned CMA managers help residential and commercial associations thrive with their management expertise and extensive network of skilled vendors.                        
+                        <?php echo $row1_text; ?>                        
                     </p>  
                     <div>
-                        <a href="#" class="cma-solid-bottom">
-                            Request Information
+                        <a href="<?php echo $row1_btn_link; ?>" class="cma-solid-bottom">
+                            <?php echo $row1_btn_text; ?>
                         </a>
                     </div>  
                 </div>                
@@ -27,14 +32,14 @@
 
             <!--  Community Management Associates  -->
             <?php
-                               
+               $row2_title = get_field('services_title');                
             ?>
             <div class=" mb-5">
                     <div class=" cma-main-body ">
                           <div class="justify-content-center">
                             <div class="col-md-8 mb-4 mt-4" style="margin: 0 auto">
                                 <h1  class="text-center">
-                                    Community Management Associates provides industry-leading services to HOAs of all sizes.
+                                    <?php echo $row2_title; ?>
                                 </h1>
                             </div>
                           </div>
@@ -85,23 +90,26 @@
 
 
             <!--  Celebrating 30 years  -->
+            <?php
+                $row3_title     = get_field('title3');
+                $row3_text      = get_field('text3');
+                $row3_btn_text  = get_field('button_name3');
+                $row3_btn_link  = get_field('button_link3');
+            ?>
             <section class=" mb-5">
                 <div class="container text-center">
                     <div class="justify-content-center">
                         <div class="col-md-8 cma-center">
                             <h1 class="cma-title-red mb-4">
-                                Celebrating 30 years of service.
+                                <?php echo $row3_title; ?>
                             </h1 >
                             <p class="cma-paragraph-normal">
-                                Community Management Associates was founded in 1989 with 7 associations and 4 employees. Today we manage over 900 associations located throughout the southeast. For the past 15 years, the Atlanta Business Chronicle ranked CMA as the number one community management firm in Atlanta. 
-                            </p>
-                            <p class="cma-paragraph-normal">
-                                We have maintained this leadership position in the community management industry through adherence to our core values of integrity, loyalty, mutual respect, trust and professionalism. Our highly-trained and proactive staff demonstrate these qualities and values when working with internal and external customers. Our company has consistently set unmatched management standards within the industry. These values and standards have resulted in long-lasting relationships with our communities and associations.
+                                <?php  echo $row3_text; ?>
                             </p>
 
                             <div class="mt-4 mb-4">
-                                    <a href="#" class="cma-solid-bottom">
-                                        Read more about our history
+                                    <a href="<?php echo $row3_btn_link; ?>" class="cma-solid-bottom">
+                                        <?php echo $row3_btn_text; ?>
                                     </a>
                             </div>
 
@@ -112,17 +120,18 @@
             </section>
 
             <!--  We handle your financials  -->
+            <?php
+                $row4_title = get_field('title4');
+                $row4_text  = get_field('text4');                
+            ?>
             <section class=" cma-bg-mixed">
                 <div class="container text-center pb-5 ">
                     <div class="col-md-8 cma-center  pt-5">
                         <h1 class="cma-title-white pb-4">
-                            We handle your financials and infrastructure, so your family and community can concentrate on living.
+                            <?php echo $row4_title; ?>
                         </h1>
                         <p class="cma-paragraph-white text-white">
-                              All communities are different. They have individual geographic needs, differing scales of building sizes and amenities and varying numbers of residents.  These needs often evolve as communities mature and as living needs and expectations change.
-                        </p>
-                        <p class="cma-paragraph-white text-white">
-                              CMA focuses on three areas that take the burden of managing communities of any size off you, so you can focus on living your life.
+                              <?php echo $row4_text; ?>
                         </p>
 
                         <div class="row pt-4 pb-3">
@@ -168,14 +177,18 @@
             </section>
 
             <!--  Why CMA  -->
+            <?php
+                $row5_title = get_field('title5');
+                $row5_text  = get_field('approach_text');                
+            ?>
             <section class="cma-main-body pt-5 pb-4" id="why_cma">
                 <div class="container text-center">
                     <div class="col-md-8 cma-center">
                         <h1 class="cma-title-red">
-                            Why CMA?
+                            <?php echo $row5_title; ?>
                         </h1>
                         <p class="cma-paragraph-why">
-                            Our approach helps your community flourish for many years to come.
+                            <?php  echo $row5_text; ?>
                         </p>
                     </div>
 
@@ -220,17 +233,23 @@
             </section>
 
             <!--  Request Information -->
+            <?php
+                $row6_title     = get_field('title6');
+                $row6_text      = get_field('description'); 
+                $row6_icon      = get_field('logo'); 
+                $row6_small     = get_field('small_captions');              
+            ?>
             <section class="pt-5 pb-4 mb-5" id="request_information">
                 <div class="container text-center">
                     <div class="col-md-8 cma-center">
                         <div class="cma-logo ">
-                            <img src="images/section6_logo.png" alt="">
+                            <img src="<?php echo $row6_icon['url']; ?>" alt="">
                         </div>
                         <h1 class="cma-title-normal">
-                            Request Information
+                            <?php echo $row6_title; ?>
                         </h1>
                         <p class="cma-paragraph-normal">
-                            We help communities of all sizes thrive. To find out what we can do for you, please fill out the form below or email us at sales@cmacommunities.com.
+                            <?php  echo $row6_text; ?>
                         </p>
 
                         <div class="cma-contact-form col-md-8 cma-center">
@@ -246,10 +265,7 @@
                                 </div>
 
                                 <div class="small form-group text-muted">
-                                    We believe in your right to privacy. We use your name and email address to respond to your inquiry – nothing else.
-                                </div>
-                                <div class="small form-group text-muted">
-                                    This form is sent securely. All information provided is confidential. 
+                                    
                                 </div>
 
                                 <div class="form-group mt-2 mb-2">
