@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<?php if( have_posts() ): ?>
-    <?php while ( have_posts() ) : the_post();  ?>
+<?php //if( have_posts() ): ?>
+    <?php //while ( have_posts() ) : the_post();  ?>
             <!-- Slider -->
             <div class="mb-5">
                 <?php
@@ -42,152 +42,41 @@
                             <div class="container">
                                 <div class="row p-5">
 
+                                    <?php
+                                        $post_type = 'services';
+                                        $args = array(
+                                            'posts_per_page'   => -1,
+                                            'orderby'          => 'date',
+                                            'order'            => 'DESC',
+                                            'post_type'        => $post_type,
+                                            'post_status'      => 'publish',
+                                            //'paged'            => $paged
+                                        );
+                                        $posts = new WP_Query($args);
 
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/HR-Services.jpg" alt="" class="img-circle">
-                                            <div class="mt-2">
-                                                <span class="font-weight-bold service-title">HR</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->        
+                                        if ( $posts->have_posts() ) {
 
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/IT-Services.jpg" alt="" class="img-circle">
-                                            <div class="mt-2">
-                                                <span class="font-weight-bold service-title">IT</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
+                                            while ( $posts->have_posts() ) : $posts->the_post(); ?>
 
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/legal-services.jpg" alt="" class="img-circle">
-                                            <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Administration</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
+                                                <div class="col-md-3 mb-5">
+                                                    <div class="text-center">
+                                                        <?php if( get_field('services_thumbnail_image') ): ?>
+                                                            <?php $image = get_field('services_thumbnail_image'); ?>
+                                                            <?php if( $image ): ?>
+                                                                <img src="<?php echo $image['url']; ?>" alt="" class="img-circle">
+                                                            <?php endif; ?>
+                                                        <?php endif; ?>
+                                                        <div class="mt-2">
+                                                            <span class="font-weight-bold service-title"><?php the_title(); ?></span>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- col-md-3 -->                                             
 
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/training-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Training</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
+                                    <?php      
+                                            endwhile; wp_reset_postdata();
+                                        }
 
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/recruitment-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Recruitment</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/maintenance-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Maintenance</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/leasing-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Leasing</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/transitions-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Transitions</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/division-managers-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Division Manager</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/administration-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Accounting</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/executive-team-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Executive Team</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/lifestyle-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Lifestyle</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/legal-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Legal</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/3rd-party-vendor-services.jpg" alt="" class="img-circle">
-                                            <div class="mt-2">
-                                                <span class="font-weight-bold service-title">3rd Party Vendors</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/risk-management-services.jpg" alt="" class="img-circle">
-                                            <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Risk Management</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
-                                    <div class="col-md-3 mb-5">
-                                        <div class="text-center">
-                                              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/vendor-management-services.jpg" alt="" class="img-circle">
-                                              <div class="mt-2">
-                                                <span class="font-weight-bold service-title">Vendor Management</span>
-                                            </div>
-                                        </div>
-                                    </div> <!-- col-md-3 -->
-
+                                    ?>
                                 </div> <!-- row -->
                             </div> <!-- container -->
 
@@ -373,9 +262,9 @@
                 </div>
             </section>
 
-    <?php endwhile; // End of the loop. ?>
+    <?php //endwhile; // End of the loop. ?>
 
-<?php endif; // End of IF statement. ?>
+<?php //endif; // End of IF statement. ?>
 
 <?php
 get_footer();
