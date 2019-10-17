@@ -14,31 +14,6 @@
 	<div id="page" class="site cf">
 		<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
 
-		<?php  /*
-		<header id="masthead" class="site-header" role="banner">
-			<div class="wrapper">
-
-
-				<?php if( get_custom_logo() ) { ?>
-					<div class="logo">
-						<?php the_custom_logo(); ?>
-					</div>
-				<?php } else { ?>
-					<h1 class="logo">
-						<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-					</h1>
-				<?php } ?>
-
-
-
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'bellaworks' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
-			</div><!-- wrapper -->
-		</header>
-		 */ ?>
-		 <!-- #masthead -->
 
 		 <header id="masthead" class="site-header" role="banner">
 		 	<div id="right-full-screen-menu-container" class="custom-top-wrap">
@@ -69,11 +44,12 @@
 		 				</div>
 
 		 				<nav class="mobilemenu">
-		 					<?php wp_nav_menu( array( 
+		 					Menu Here
+		 					<?php /*wp_nav_menu( array( 
 		 						'container' => 'ul',
 		 						'theme_location' => 'primary-menu',
 		 						'menu_class'     => 'mobilemain',
-		 					)); ?>
+		 					));*/ ?>
 		 				</nav>
 
 

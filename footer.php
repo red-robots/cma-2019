@@ -53,16 +53,34 @@
               <li class="list-group-item"><a href="">Resident Login</a></li>
               <li class="list-group-item"><a href="">Association Search</a></li>
             </ul>
-            <div class=" mt-3 mb-2 text-dark">
-              LOCATIONS
+            <div class="footer_locations">
+              <div class=" mt-3 mb-2 text-dark">
+                  LOCATIONS
+              </div>
+              <ul class="list-group">
+              <?php
+                    $post_type = 'location';
+                    $args = array(
+                        'posts_per_page'   => -1,
+                        'orderby'          => 'date',
+                        'order'            => 'DESC',
+                        'post_type'        => $post_type,
+                        'post_status'      => 'publish',
+                        //'paged'            => $paged
+                    );
+                    $posts = new WP_Query($args);
+
+                    if ( $posts->have_posts() ) {
+
+                          while ( $posts->have_posts() ) : $posts->the_post(); 
+
+                  ?>
+                      <li class="list-group-item"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></li>
+                <?php     endwhile; wp_reset_postdata();
+                      }
+                 ?>
+                </ul>
             </div>
-            <ul class="list-group">
-              <li class="list-group-item"><a href="">Alabama</a></li>
-              <li class="list-group-item"><a href="">Florida</a></li>
-              <li class="list-group-item"><a href="">Georgia</a></li>
-              <li class="list-group-item"><a href="">South Carolina</a></li>
-              <li class="list-group-item"><a href="">Tennessee</a></li>
-            </ul>
           </div>
         </div>
       </div>
