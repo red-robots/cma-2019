@@ -1,9 +1,11 @@
 	</div><!-- #content -->
 
   <?php  
-    $company_name = get_field('company_name');
-    $company_email = get_field('email_address');
-    //var_dump($company_email);
+    $company_name = get_field('company_name', 'option');
+    $company_email = get_field('email_address', 'option');
+    $company_phone = get_field('phone', 'option');
+    $company_bldg_name = get_field('building_name', 'option');
+    $company_address = get_field('building_address', 'option');
   ?>
 	
     <footer class="cma-footer" id="colophon" role="contentinfo">
@@ -11,16 +13,14 @@
       <div class="row">
         <div class="col-md-7">
           <h4 class="cma-title-red text-bold">
-            <?php echo ($company_name) ? $company_name : 'Community Management Associates'; ?>
+            <?php echo ($company_name) ? $company_name : ''; ?>
           </h4>
           <div>
-            P: 800-522-6314 | E: info@cmacommunities.com
+            P: <?php echo ($company_phone) ? $company_phone : ''; ?> | E: <a href="mailto:<?php echo ($company_email) ? $company_email : ''; ?>"><?php echo ($company_email) ? $company_email : ''; ?></a>
           </div>
           <div class="mb-5">
-            CMA CORPORATE<br>
-            1465 Northside Drive NW<br>
-            Suite 128<br>
-            Atlanta, GA 30318
+            <div><?php echo ($company_bldg_name) ? $company_bldg_name : ''; ?></div>
+            <div class="company_address"><?php echo ($company_address) ? $company_address : ''; ?></div>
           </div>
           
       </div>
@@ -100,17 +100,23 @@
       <div class="col-md-8 justify-content-left">
         <div class="">
               <ul class="list-group flex-md-row">
+                <?php
+                  $social_media = get_field('social_media', 'option');
+
+                  if($social_media){
+                    foreach($social_media as $social){
+                      $icon = $social['icon'];
+                      $link = $social['link'];
+                ?>
                 <li class="list-group-item">
-                  <a href="">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/footer_linkedin.png" alt="">
+                  <a href="<?php echo $link; ?>" target="_blank">
+                    <?php if($icon): ?>
+                    <img src="<?php echo $icon['url']; ?>" alt="">
+                  <?php endif; ?>
                   </a>
                 </li>
-                <li class="list-group-item">
-                  <a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/footer_facebook.png" alt=""></a>
-                </li>
-                <li class="list-group-item">
-                  <a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/footer_twitter.png" alt=""></a>
-                </li>
+                <?php } // foreach($social_media as $social)
+                } // if($social_media) ?>               
               </ul>
             </div>
             <div class="small mt-2">
