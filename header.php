@@ -18,7 +18,7 @@
 		 <header id="masthead" class="site-header" role="banner">
 		 	<div id="right-full-screen-menu-container" class="custom-top-wrap">
 		 		<div class="custom-top">
-		 			<div class="wrapper">
+		 			<div class="wrapper main_menu_top">
 
 		 				<?php if(is_home()) { ?>
 		 					<h1 class="logo">
@@ -43,14 +43,41 @@
 		 					<span></span>
 		 				</div>
 
-		 				<nav class="mobilemenu">
-		 					Menu Here
-		 					<?php /*wp_nav_menu( array( 
-		 						'container' => 'ul',
-		 						'theme_location' => 'primary-menu',
+		 				<div class="mobilemenu">		 					
+		 					<?php 
+		 					wp_nav_menu( array( 
+		 						'menu'		=> 'Top Menu',
+		 						'container' => 'ul',		 						
 		 						'menu_class'     => 'mobilemain',
-		 					));*/ ?>
-		 				</nav>
+		 					)); ?>
+
+		 					<div class="header_location">
+		 						<div class="header_location_title">LOCATION</div>
+		 						<ul class="list-group">
+				              <?php
+				                    $post_type = 'location';
+				                    $args = array(
+				                        'posts_per_page'   => -1,
+				                        'orderby'          => 'date',
+				                        'order'            => 'DESC',
+				                        'post_type'        => $post_type,
+				                        'post_status'      => 'publish',
+				                        //'paged'            => $paged
+				                    );
+				                    $posts = new WP_Query($args);
+
+				                    if ( $posts->have_posts() ) {
+
+				                          while ( $posts->have_posts() ) : $posts->the_post(); 
+
+				                  ?>
+				                      <li class="list-group-item"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></li>
+				                <?php     endwhile; wp_reset_postdata();
+				                      }
+				                 ?>
+				                </ul>
+		 					</div>
+		 				</div>
 
 
 

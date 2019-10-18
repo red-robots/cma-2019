@@ -44,7 +44,6 @@
               $menu['title']  = $value->title;
               $ar_list[] = $menu;               
             }
-
             $rows = ceil(count($ar_list) / 2);
             $lists  = array_chunk($ar_list, $rows);
 

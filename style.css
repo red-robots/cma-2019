@@ -6417,7 +6417,7 @@ button.menu-toggle {
   z-index: 100002; }
   @media screen and (min-width: 600px) {
     .burger {
-      top: 15px; } }
+      top: 0; } }
   .burger span {
     position: relative;
     margin-top: 9px;
