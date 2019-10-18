@@ -7,24 +7,9 @@
 
 jQuery(document).ready(function ($) {
 	
-	/*
-	*
-	*	Flexslider
-	*
-	------------------------------------*/
-	$('.flexslider').flexslider({
-		animation: "slide",
-	}); // end register flexslider
-	
-	/*
-	*
-	*	Colorbox
-	*
-	------------------------------------*/
-	$('a.gallery').colorbox({
-		rel:'gal',
-		width: '80%', 
-		height: '80%'
+	$('.burger').on('click', function(){
+		$(this).toggleClass('clicked');
+		$('.mobilemenu').toggleClass('show');		
 	});
 	
 
@@ -35,7 +20,7 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
-
+	/*
 	$(document).on("click","#toggleMenu",function(){
 		$(this).toggleClass('open');
 		$('.mobile-navigation').toggleClass('open');
@@ -47,5 +32,6 @@ jQuery(document).ready(function ($) {
 			$('.mobile-navigation').addClass("overflow-height");
 		}
 	});
+	*/
 
 });// END #####################################    END

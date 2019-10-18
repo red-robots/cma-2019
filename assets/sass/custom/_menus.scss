@@ -220,11 +220,11 @@ button.menu-toggle {
 	border-radius: 4px;
 	z-index: 100002;
 	@media screen and (min-width: $tabwidth) {
-		top: 15px;
+		top: 0;
 	}
   
 	span {
-		@include burger(20px, 3px, 6px, #d2d2d2); // gray
+		@include burger(20px, 3px, 6px, #db1c2b); // red
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -237,7 +237,7 @@ button.menu-toggle {
 			@include burger-to-cross;
 			
 			&:before, &:after {
-				background-color: #d2d2d2;
+				background-color: #db1c2b;
 			}
 		}
 	}

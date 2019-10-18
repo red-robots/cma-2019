@@ -253,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
     right: -75px;    
     height: 562px;
     width: 50%;
-    padding: 38px 40px 60px 40px;
+    padding: 30px 40px 60px 40px;
     /*overflow-y: auto;*/
     z-index: 100001;    
     display: block;
@@ -268,11 +268,18 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   top: 0;
   vertical-align:top;
-  
+  margin-right: 20px;
+  margin-top: 10px;
+  width: 135px;
 }
 
 .mobilemain .menu-item-has-children a{
   font-weight: bold;
+}
+
+.mobilemain .sub-menu{
+  padding-left: 0;
+
 }
 
 .mobilemain .sub-menu a{
@@ -287,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 200px;
     float: right;
     position: relative;
-    top: -200px;
+    top: -226px;
     color: white;
     font-weight: bold;
 }
@@ -300,4 +307,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: 16px;
   color: #999;
+}
+
+.mobilemenu{
+  display: none;
+}
+
+.mobilemenu.show{
+  display: block;
+  animation-delay: 2s;
 }

@@ -1743,16 +1743,16 @@ section.social a:hover svg{-webkit-transform:scale(1.1);-ms-transform:scale(1.1)
 .comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:50%}
 .comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next{float:right;text-align:right;width:50%}
 .burger{width:50px;height:50px;position:absolute;top:5px;right:15px;border-radius:4px;z-index:100002}
-@media screen and (min-width:600px){.burger{top:15px}
+@media screen and (min-width:600px){.burger{top:0}
 }.burger span{position:relative;margin-top:9px;margin-bottom:9px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;top:50%;left:50%;margin-left:-15px;margin-top:-1.5px}
-.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:3px;background-color:#d2d2d2;outline:1px solid transparent;-webkit-transition-property:background-color,-webkit-transform;transition-property:background-color,-webkit-transform;transition-property:background-color,transform;transition-property:background-color,transform,-webkit-transform;-webkit-transition-duration:.3s;transition-duration:.3s}
+.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:3px;background-color:#db1c2b;outline:1px solid transparent;-webkit-transition-property:background-color,-webkit-transform;transition-property:background-color,-webkit-transform;transition-property:background-color,transform;transition-property:background-color,transform,-webkit-transform;-webkit-transition-duration:.3s;transition-duration:.3s}
 .burger span::before,.burger span::after{position:absolute;content:""}
 .burger span::before{top:-9px}
 .burger span::after{top:9px}
 .burger.clicked span{background-color:transparent}
 .burger.clicked span::before{-webkit-transform:translateY(9px) rotate(45deg);-ms-transform:translateY(9px) rotate(45deg);transform:translateY(9px) rotate(45deg)}
 .burger.clicked span::after{-webkit-transform:translateY(-9px) rotate(-45deg);-ms-transform:translateY(-9px) rotate(-45deg);transform:translateY(-9px) rotate(-45deg)}
-.burger.clicked span:before,.burger.clicked span:after{background-color:#d2d2d2}
+.burger.clicked span:before,.burger.clicked span:after{background-color:#db1c2b}
 .burger:hover{cursor:pointer}
 nav.mobilemenu{background-color:rgba(255,255,255,0.9);position:fixed;z-index:9;top:0;right:0;height:100%;width:100%;padding:100px 40px 60px 40px;overflow-y:auto;z-index:100001;-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);-webkit-transition:-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:transform .55s cubic-bezier(0.785,0.135,0.15,0.86),-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86)}
 nav.mobilemenu.show{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}

@@ -36,7 +36,6 @@
 
 		 				<nav id="site-navigation" class="main-navigation" role="navigation">
 		 					<button class="menu-toggle" id="toggleMenu" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
-		 					<?php //wp_nav_menu( array( 'theme_location' => 'primary-menu', 'menu_id' => 'primary-menu' ) ); ?>
 		 				</nav><!-- #site-navigation -->
 
 		 				<div class="burger">
