@@ -155,7 +155,7 @@
                                 <div class="cma-sub-title text-white">
                                   <?php echo ($feature_title) ?  $feature_title : ''; ?>
                                 </div>
-                                <p class="cma-paragraph-white">
+                                <p class="cma-paragraph-white" style="margin-top: 10px;">
                                   <?php echo ($feature_desc) ?  $feature_desc : ''; ?>
                                 </p>
                             </div>

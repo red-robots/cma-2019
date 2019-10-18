@@ -1,12 +1,17 @@
 	</div><!-- #content -->
 
+  <?php  
+    $company_name = get_field('company_name');
+    $company_email = get_field('email_address');
+    //var_dump($company_email);
+  ?>
 	
     <footer class="cma-footer" id="colophon" role="contentinfo">
     <div class="container text-left">
       <div class="row">
         <div class="col-md-8">
           <h4 class="cma-title-red text-bold">
-            Community Management Associates
+            <?php echo ($company_name) ? $company_name : 'Community Management Associates'; ?>
           </h4>
           <div>
             P: 800-522-6314 | E: info@cmacommunities.com
@@ -105,7 +110,7 @@
               </ul>
             </div>
             <div class="small mt-2">
-              Copyright 2019 CMA Community Management Associates. All Rights Reserved.
+              Copyright <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?>. All Rights Reserved.
             </div>
       </div>
 
