@@ -9,7 +9,7 @@
     <footer class="cma-footer" id="colophon" role="contentinfo">
     <div class="container text-left">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
           <h4 class="cma-title-red text-bold">
             <?php echo ($company_name) ? $company_name : 'Community Management Associates'; ?>
           </h4>
@@ -25,41 +25,45 @@
           
       </div>
 
-      <div class="col-md-4">
+      
+
+      <div class="col-md-5">
         <div class=" mb-3" >
           <span class="cma-solid-bottom">Request Information</span>
         </div>
         <div class="row">
-          <div class="col-sm-6">
-            <ul class="list-group">
-              <li class="list-group-item"><a href="">HOAs</a></li>
-              <li class="list-group-item"><a href="">Condos</a></li>
-              <li class="list-group-item"><a href="">Services</a></li>
-              <li class="list-group-item"><a href="">Developers</a></li>
-              <li class="list-group-item"><a href="">Commercial</a></li>
-              <li class="list-group-item"><a href="">Consulting</a></li>
-              <li class="list-group-item"><a href="">Vendors</a></li>
-              <li class="list-group-item"><a href="">Values</a></li>
-              <li class="list-group-item"><a href="">History</a></li>
-              <li class="list-group-item"><a href="">Expertise</a></li>
-              <li class="list-group-item"><a href="">People</a></li>
-            </ul>
 
+          <?php 
+
+            $menu_items = wp_get_nav_menu_items('Footer Menu');
             
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-group">
-              <li class="list-group-item"><a href="">Payments</a></li>
-              <li class="list-group-item"><a href="">Documents</a></li>
-              <li class="list-group-item"><a href="">After Hours Contact</a></li>
-              <li class="list-group-item"><a href="">Buyer/Seller Services</a></li>
-              <li class="list-group-item"><a href="">Vendor Services</a></li>
-              <li class="list-group-item"><a href="">Contact</a></li>
-              <li class="list-group-item"><a href="">Resident Login</a></li>
-              <li class="list-group-item"><a href="">Association Search</a></li>
-            </ul>
+            $menu   = array();
+            $ar_list   = array();
+            foreach($menu_items as $key => $value){ 
+              $menu['url']    = $value->url;
+              $menu['title']  = $value->title;
+              $ar_list[] = $menu;               
+            }
+
+            $rows = ceil(count($ar_list) / 2);
+            $lists  = array_chunk($ar_list, $rows);
+
+            foreach ( $lists as $column) {
+                echo '<div class="col-md-4"><ul class="list-group">';
+                foreach ($column as $item) {
+                    echo '<li class="list-group-item"><a href="'. $item['url'] .'">' . $item['title'] . '</a></li>';
+                }
+                echo '</ul></div>';
+            }
+
+          ?>
+
+       
+
+          <div class="col-sm-4">       
+
             <div class="footer_locations">
-              <div class=" mt-3 mb-2 text-dark">
+              <div class="mb-2 text-dark">
                   LOCATIONS
               </div>
               <ul class="list-group">
@@ -87,6 +91,7 @@
                 </ul>
             </div>
           </div>
+
         </div>
       </div>
 

@@ -199,7 +199,7 @@
                     <div class="cma-center cma-why-container">
                         <div class="cma-icon-black">
                             <?php if($approach_icon): ?>
-                            <img src="<?php echo $approach_icon;  ?>" alt="<?php echo ($approach_title) ? $approach_title : ''; ?>">
+                            <img src="<?php echo $approach_icon['url'];  ?>" alt="<?php echo ($approach_title) ? $approach_title : ''; ?>">
                         <?php endif; ?>
                         </div>
                         <div class="cma-title-dark">
@@ -238,6 +238,8 @@
                         </p>
 
                         <div class="cma-contact-form col-md-8 cma-center">
+                            <?php gravity_form('Request Information', false, false, false, '', false); ?>
+                            <!--
                             <form action="#" method="post">
                                 <div class="form-group">
                                     <input type="text" name="name" class="cma-input-form form-control" placeholder="Name">
@@ -258,6 +260,7 @@
                                 </div>
 
                             </form>
+                            -->
                         </div>
                     </div>
                 </div>
