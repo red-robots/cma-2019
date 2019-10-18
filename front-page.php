@@ -135,40 +135,34 @@
                         </p>
 
                         <div class="row pt-4 pb-3">
+                            <?php  
+                                $features = get_field('features');
+
+                                if($features){
+
+                                   foreach($features as $feature){
+
+                                        $feature_icon   = $feature['icon'];
+                                        $feature_title  = $feature['title'];
+                                        $feature_desc   = $feature['description'];                                       
+                            ?>
                             <div class="col-sm-4">
                                 <div class="cma-icon-holder">
-                                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section3_financial_mgt.png" alt="">
+                                    <?php if($feature_icon): ?>
+                                    <img src="<?php echo $feature_icon['url']; ?>" alt="<?php echo $feature_title; ?>">
+                                    <?php endif; ?>
                                 </div>
                                 <div class="cma-sub-title text-white">
-                                  Financial Management
+                                  <?php echo ($feature_title) ?  $feature_title : ''; ?>
                                 </div>
                                 <p class="cma-paragraph-white">
-                                  Our team of experienced accounting and administrative employees handle all of your accounting needs.
+                                  <?php echo ($feature_desc) ?  $feature_desc : ''; ?>
                                 </p>
                             </div>
 
-                            <div class="col-sm-4">
-                                <div class="cma-icon-holder">
-                                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section3_daily_operations.png" alt="">
-                                </div>
-                                <div class="cma-sub-title text-white">
-                                  Daily Operations
-                                </div>
-                                <p class="cma-paragraph-white">
-                                    A dedicated CMA association manager works for your association and board to best attend to your community’s needs.
-                                </p>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="cma-icon-holder">
-                                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section3_association.png" alt="">
-                                </div>
-                                <div class="cma-sub-title text-white">
-                                    Association Management
-                                </div>
-                                <p class="cma-paragraph-white">
-                                    Our knowledge and vendor contacts allow us to quickly address almost any type of work your community needs.
-                                </p>
-                            </div>
+                            <?php }
+                            }
+                             ?>
                         </div>
 
                     </div>
@@ -192,42 +186,33 @@
                         </p>
                     </div>
 
-                    <div class="cma-center cma-why-container">
-                        <div class="cma-icon-black">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section4_focused.png" alt="">
-                        </div>
-                        <div class="cma-title-dark">
-                            We are client focused
-                        </div>
-                        <p class="cma-paragraph-why">
-                            Each association is unique and requires customized service.
-                        </p>
-                    </div>
+                    <?php
+                        $approaches = get_field('approaches');
+                        if($approaches){
+                            foreach ($approaches as $approach) {
+                                $approach_icon  = $approach['icon'];
+                                $approach_title = $approach['title'];
+                                $approach_text  = $approach['text']; 
+                                //var_dump($approach);                              
+                    ?>
 
                     <div class="cma-center cma-why-container">
                         <div class="cma-icon-black">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section4_proactive.png" alt="">
+                            <?php if($approach_icon): ?>
+                            <img src="<?php echo $approach_icon;  ?>" alt="<?php echo ($approach_title) ? $approach_title : ''; ?>">
+                        <?php endif; ?>
                         </div>
                         <div class="cma-title-dark">
-                            We are proactive
+                            <?php echo ($approach_title) ? $approach_title : ''; ?>
                         </div>
                         <p class="cma-paragraph-why">
-                            A dedicated team actively manages your community.
+                            <?php echo ($approach_text) ? $approach_text : ''; ?>
                         </p>
                     </div>
 
-                    <div class=" cma-center cma-why-container">
-                        <div class="cma-icon-black">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/section4_value_oriented.png" alt="">
-                        </div>
-                        <div class="cma-title-dark">
-                            We are value oriented.
-                        </div>
-                        <p class="cma-paragraph-why">
-                            We continually work to negotiate the best rates and find savings.
-                        </p>
-                    </div>
-
+                    <?php }
+                    }
+                     ?>
 
                 </div>
             </section>
