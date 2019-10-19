@@ -8,10 +8,11 @@
 jQuery(document).ready(function ($) {
 	
 	$('.gfield_html_formatted').css('padding-top', '20px');
+	$('.ginput_container_email').css('margin-top', '-22px');
 
 	$('.burger').on('click', function(){
 		$(this).toggleClass('clicked');
-		$('.mobilemenu').toggleClass('show');		
+		$('.mobilemenu').fadeToggle(500).toggleClass('show');		
 	});
 	
 

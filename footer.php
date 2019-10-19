@@ -11,7 +11,7 @@
     <footer class="cma-footer" id="colophon" role="contentinfo">
     <div class="container text-left">
       <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-7 fadeInLeft wow" data-wow-delay="0.5s">
           <h4 class="cma-title-red text-bold">
             <?php echo ($company_name) ? $company_name : ''; ?>
           </h4>
@@ -27,7 +27,7 @@
 
       
 
-      <div class="col-md-5">
+      <div class="col-md-5 fadeInRight wow" data-wow-delay="0.5s">
         <div class=" mb-3" >
           <span class="cma-solid-bottom">Request Information</span>
         </div>
@@ -97,7 +97,7 @@
 
       </div> <!-- row -->
       
-      <div class="col-md-8 justify-content-left">
+      <div class="col-md-8 justify-content-left fadeInLeft wow" data-wow-delay="0.7s">
         <div class="">
               <ul class="list-group flex-md-row">
                 <?php

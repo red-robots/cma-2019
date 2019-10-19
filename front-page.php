@@ -17,9 +17,9 @@
                 $row1_btn_link  = get_field('button_link');
             ?>
             <div class="row mb-5 justify-content-center">
-                <div class="col-md-8 text-center fadeInUp wow" data-wow-delay="0.5s">
-                    <h1 class="cma-title-red"><?php  echo ($row1_title) ? $row1_title : ''; ?></h1>
-                    <p class="cma-paragraph-normal">
+                <div class="col-md-8 text-center fadeIn wow" data-wow-delay="0.7s">
+                    <h1 class="cma-title-red " ><?php  echo ($row1_title) ? $row1_title : ''; ?></h1>
+                    <p class="cma-paragraph-normal " >
                         <?php echo ($row1_text) ? $row1_text : ''; ?>                        
                     </p>  
                     <div>
@@ -102,15 +102,15 @@
                 <div class="container text-center">
                     <div class="justify-content-center">
                         <div class="col-md-8 cma-center " >
-                            <h1 class="cma-title-red mb-4 fadeInUp wow" data-wow-delay="0.5s">
+                            <h1 class="cma-title-red mb-4 fadeInUp wow" data-wow-delay="0.2s">
                                 <?php echo ($row3_title) ? $row3_title : ''; ?>
                             </h1 >
 
-                            <p class="cma-paragraph-normal fadeInUp wow" data-wow-delay="2s">
+                            <div class="cma-paragraph-normal fadeInUp wow" data-wow-delay="0.4s">
                                 <?php  echo ($row3_text) ? $row3_text : ''; ?>
-                            </p>
+                            </div>
 
-                            <div class="mt-4 mb-4 fadeInUp wow" data-wow-delay="1s">
+                            <div class="mt-4 mb-4 fadeInUp wow" data-wow-delay="0.8s">
                                     <?php if($row3_btn_link): ?>
                                     <a href="<?php echo $row3_btn_link; ?>" class="cma-solid-bottom">
                                         <?php echo $row3_btn_text; ?>
@@ -132,12 +132,12 @@
             <section class=" cma-bg-mixed">
                 <div class="container text-center pb-5 ">
                     <div class="col-md-8 cma-center  pt-5">
-                        <h1 class="cma-title-white pb-4 fadeInUp wow" data-wow-delay="0.5s">
+                        <h1 class="cma-title-white pb-4 fadeInUp wow" data-wow-delay="0.2s">
                             <?php echo ($row4_title) ? $row4_title : ''; ?>
                         </h1>
-                        <p class="cma-paragraph-white text-white fadeInUp wow" data-wow-delay="1s">
+                        <div class="cma-paragraph-white text-white fadeInUp wow" data-wow-delay="0.5s">
                               <?php echo ($row4_text) ? $row4_text : ''; ?>
-                        </p>
+                        </div>
 
                         <div class="row pt-4 pb-3">
                             <?php  
@@ -242,11 +242,11 @@
                         <h1 class="cma-title-normal fadeInUp wow" data-wow-delay="0.7s">
                             <?php echo ($row6_title) ? $row6_title : ''; ?>
                         </h1>
-                        <p class="cma-paragraph-normal fadeInUp wow" data-wow-delay="1s">
+                        <div class="cma-paragraph-normal fadeInUp wow" data-wow-delay="1s">
                             <?php  echo ($row6_text) ? $row6_text : ''; ?>
-                        </p>
+                        </div>
 
-                        <div class="cma-contact-form col-md-8 cma-center fadeInUp wow" data-wow-delay="1.2s">
+                        <div class="cma-contact-form col-md-8 cma-center fadeInUp wow" data-wow-delay="1s">
                             <?php gravity_form('Request Information', false, false, false, '', false); ?>
                             
                         </div>
