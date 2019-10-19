@@ -19,9 +19,9 @@
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-8 text-center fadeIn wow" data-wow-delay="0.7s">
                     <h1 class="cma-title-red " ><?php  echo ($row1_title) ? $row1_title : ''; ?></h1>
-                    <p class="cma-paragraph-normal " >
+                    <div class="cma-paragraph-normal " >
                         <?php echo ($row1_text) ? $row1_text : ''; ?>                        
-                    </p>  
+                    </div>  
                     <div>
                         <?php if($row1_btn_link): ?>
                         <a href="<?php echo $row1_btn_link; ?>" class="cma-solid-bottom">
@@ -65,7 +65,7 @@
 
                                             while ( $posts->have_posts() ) : $posts->the_post(); ?>
 
-                                                <div class="col-md-3 mb-5">
+                                                <div class="col-md-3 col-6 mb-5">
                                                     <div class="text-center">
                                                         <?php if( get_field('services_thumbnail_image') ): ?>
                                                             <?php $image = get_field('services_thumbnail_image'); ?>

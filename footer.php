@@ -27,7 +27,7 @@
 
       
 
-      <div class="col-md-5 fadeInRight wow" data-wow-delay="0.5s">
+      <div class="col-md-5  fadeInRight wow" data-wow-delay="0.5s">
         <div class=" mb-3" >
           <span class="cma-solid-bottom">Request Information</span>
         </div>
@@ -48,7 +48,7 @@
             $lists  = array_chunk($ar_list, $rows);
 
             foreach ( $lists as $column) {
-                echo '<div class="col-md-4"><ul class="list-group">';
+                echo '<div class="col-md-4 col-6"><ul class="list-group">';
                 foreach ($column as $item) {
                     echo '<li class="list-group-item"><a href="'. $item['url'] .'">' . $item['title'] . '</a></li>';
                 }
@@ -59,7 +59,7 @@
 
        
 
-          <div class="col-sm-4">       
+          <div class="col-sm-4 col-6">       
 
             <div class="footer_locations">
               <div class="mb-2 text-dark">
@@ -97,9 +97,9 @@
 
       </div> <!-- row -->
       
-      <div class="col-md-8 justify-content-left fadeInLeft wow" data-wow-delay="0.7s">
+      <div class="col-md-8 justify-content-left social_media fadeInLeft wow" data-wow-delay="0.7s">
         <div class="">
-              <ul class="list-group flex-md-row">
+              <ul class="list-group d-flex flex-row">
                 <?php
                   $social_media = get_field('social_media', 'option');
 
@@ -108,7 +108,7 @@
                       $icon = $social['icon'];
                       $link = $social['link'];
                 ?>
-                <li class="list-group-item">
+                <li class="list-group-item ">
                   <a href="<?php echo $link; ?>" target="_blank">
                     <?php if($icon): ?>
                     <img src="<?php echo $icon['url']; ?>" alt="">

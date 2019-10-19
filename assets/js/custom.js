@@ -9,6 +9,10 @@ jQuery(document).ready(function ($) {
 	
 	$('.gfield_html_formatted').css('padding-top', '20px');
 	$('.ginput_container_email').css('margin-top', '-22px');
+	if (window.matchMedia('(max-width: 767px)').matches) {
+        $('.gform_button').css('width', '39%').css('margin', '0');
+    }
+	//
 
 	$('.burger').on('click', function(){
 		$(this).toggleClass('clicked');
@@ -21,20 +25,6 @@ jQuery(document).ready(function ($) {
 	*	Wow Animation
 	*
 	------------------------------------*/
-	new WOW().init();
-
-	/*
-	$(document).on("click","#toggleMenu",function(){
-		$(this).toggleClass('open');
-		$('.mobile-navigation').toggleClass('open');
-		$('body').toggleClass('open-mobile-menu');
-		$('.site-header .logo').toggleClass('fixed');
-		var parentdiv = $(".mobile-navigation").outerHeight();
-		var mobile_nav_height = $(".mobile-main-nav").outerHeight();
-		if(mobile_nav_height>parentdiv) {
-			$('.mobile-navigation').addClass("overflow-height");
-		}
-	});
-	*/
+	new WOW().init();	
 
 });// END #####################################    END
