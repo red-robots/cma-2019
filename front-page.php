@@ -17,15 +17,17 @@
                 $row1_btn_link  = get_field('button_link');
             ?>
             <div class="row mb-5 justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h1 class="cma-title-red"><?php  echo $row1_title; ?></h1>
+                <div class="col-md-8 text-center fadeInUp wow" data-wow-delay="0.5s">
+                    <h1 class="cma-title-red"><?php  echo ($row1_title) ? $row1_title : ''; ?></h1>
                     <p class="cma-paragraph-normal">
-                        <?php echo $row1_text; ?>                        
+                        <?php echo ($row1_text) ? $row1_text : ''; ?>                        
                     </p>  
                     <div>
+                        <?php if($row1_btn_link): ?>
                         <a href="<?php echo $row1_btn_link; ?>" class="cma-solid-bottom">
                             <?php echo $row1_btn_text; ?>
                         </a>
+                        <?php endif; ?>
                     </div>  
                 </div>                
             </div>
@@ -34,18 +36,18 @@
             <?php
                $row2_title = get_field('services_title');                
             ?>
-            <div class=" mb-5">
+            <div class="mb-5 " >
                     <div class=" cma-main-body ">
-                          <div class="justify-content-center">
+                          <div class="justify-content-center fadeInUp wow" data-wow-delay="1s">
                             <div class="col-md-8 mb-4 mt-4" style="margin: 0 auto">
                                 <h1  class="text-center">
-                                    <?php echo $row2_title; ?>
+                                    <?php echo ($row2_title) ? $row2_title : ''; ?>
                                 </h1>
                             </div>
                           </div>
 
                             <div class="container">
-                                <div class="row p-5">
+                                <div class="row p-5 fadeInUp wow" data-wow-delay="1s">
 
                                     <?php
                                         $post_type = 'services';
@@ -99,18 +101,21 @@
             <section class=" mb-5">
                 <div class="container text-center">
                     <div class="justify-content-center">
-                        <div class="col-md-8 cma-center">
-                            <h1 class="cma-title-red mb-4">
-                                <?php echo $row3_title; ?>
+                        <div class="col-md-8 cma-center " >
+                            <h1 class="cma-title-red mb-4 fadeInUp wow" data-wow-delay="0.5s">
+                                <?php echo ($row3_title) ? $row3_title : ''; ?>
                             </h1 >
-                            <p class="cma-paragraph-normal">
-                                <?php  echo $row3_text; ?>
+
+                            <p class="cma-paragraph-normal fadeInUp wow" data-wow-delay="2s">
+                                <?php  echo ($row3_text) ? $row3_text : ''; ?>
                             </p>
 
-                            <div class="mt-4 mb-4">
+                            <div class="mt-4 mb-4 fadeInUp wow" data-wow-delay="1s">
+                                    <?php if($row3_btn_link): ?>
                                     <a href="<?php echo $row3_btn_link; ?>" class="cma-solid-bottom">
                                         <?php echo $row3_btn_text; ?>
                                     </a>
+                                    <?php endif;  ?>
                             </div>
 
                         </div>
@@ -127,11 +132,11 @@
             <section class=" cma-bg-mixed">
                 <div class="container text-center pb-5 ">
                     <div class="col-md-8 cma-center  pt-5">
-                        <h1 class="cma-title-white pb-4">
-                            <?php echo $row4_title; ?>
+                        <h1 class="cma-title-white pb-4 fadeInUp wow" data-wow-delay="0.5s">
+                            <?php echo ($row4_title) ? $row4_title : ''; ?>
                         </h1>
-                        <p class="cma-paragraph-white text-white">
-                              <?php echo $row4_text; ?>
+                        <p class="cma-paragraph-white text-white fadeInUp wow" data-wow-delay="1s">
+                              <?php echo ($row4_text) ? $row4_text : ''; ?>
                         </p>
 
                         <div class="row pt-4 pb-3">
@@ -139,14 +144,14 @@
                                 $features = get_field('features');
 
                                 if($features){
-
+                                   $x = 0;     
                                    foreach($features as $feature){
-
+                                        $x++;
                                         $feature_icon   = $feature['icon'];
                                         $feature_title  = $feature['title'];
                                         $feature_desc   = $feature['description'];                                       
                             ?>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 fadeInUp wow" data-wow-delay="<?php echo ($x / 5) . 's'; ?>">
                                 <div class="cma-icon-holder">
                                     <?php if($feature_icon): ?>
                                     <img src="<?php echo $feature_icon['url']; ?>" alt="<?php echo $feature_title; ?>">
@@ -177,26 +182,28 @@
             ?>
             <section class="cma-main-body pt-5 pb-4" id="why_cma">
                 <div class="container text-center">
-                    <div class="col-md-8 cma-center">
+                    <div class="col-md-8 cma-center fadeInUp wow" data-wow-delay="0.5s">
                         <h1 class="cma-title-red">
-                            <?php echo $row5_title; ?>
+                            <?php echo ($row5_title) ? $row5_title : ''; ?>
                         </h1>
                         <p class="cma-paragraph-why">
-                            <?php  echo $row5_text; ?>
+                            <?php  echo ($row5_text) ? $row5_text : ''; ?>
                         </p>
                     </div>
 
                     <?php
                         $approaches = get_field('approaches');
                         if($approaches){
+                            $x = 0;
                             foreach ($approaches as $approach) {
+                                $x++;
                                 $approach_icon  = $approach['icon'];
                                 $approach_title = $approach['title'];
                                 $approach_text  = $approach['text']; 
                                 //var_dump($approach);                              
                     ?>
 
-                    <div class="cma-center cma-why-container">
+                    <div class="cma-center cma-why-container fadeInUp wow" data-wow-delay="<?php echo ($x / 5). 's'; ?>">
                         <div class="cma-icon-black">
                             <?php if($approach_icon): ?>
                             <img src="<?php echo $approach_icon['url'];  ?>" alt="<?php echo ($approach_title) ? $approach_title : ''; ?>">
@@ -227,40 +234,21 @@
             <section class="pt-5 pb-4 mb-5" id="request_information">
                 <div class="container text-center">
                     <div class="col-md-8 cma-center">
-                        <div class="cma-logo ">
+                        <div class="cma-logo fadeInUp wow" data-wow-delay="0.5s">
+                            <?php if($row6_icon): ?>
                             <img src="<?php echo $row6_icon['url']; ?>" alt="">
+                            <?php endif; ?>
                         </div>
-                        <h1 class="cma-title-normal">
-                            <?php echo $row6_title; ?>
+                        <h1 class="cma-title-normal fadeInUp wow" data-wow-delay="0.7s">
+                            <?php echo ($row6_title) ? $row6_title : ''; ?>
                         </h1>
-                        <p class="cma-paragraph-normal">
-                            <?php  echo $row6_text; ?>
+                        <p class="cma-paragraph-normal fadeInUp wow" data-wow-delay="1s">
+                            <?php  echo ($row6_text) ? $row6_text : ''; ?>
                         </p>
 
-                        <div class="cma-contact-form col-md-8 cma-center">
+                        <div class="cma-contact-form col-md-8 cma-center fadeInUp wow" data-wow-delay="1.2s">
                             <?php gravity_form('Request Information', false, false, false, '', false); ?>
-                            <!--
-                            <form action="#" method="post">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="cma-input-form form-control" placeholder="Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="email" class="cma-input-form form-control" placeholder="Email Address">
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="message" id="" class="form-control cma-input-form" cols="30" rows="4" placeholder="How may we help you?"></textarea>
-                                </div>
-
-                                <div class="small form-group text-muted">
-                                    
-                                </div>
-
-                                <div class="form-group mt-2 mb-2">
-                                    <button type="button" class="cma-input-btn">Submit Request</button>
-                                </div>
-
-                            </form>
-                            -->
+                            
                         </div>
                     </div>
                 </div>

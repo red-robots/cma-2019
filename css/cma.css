@@ -301,6 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header_location ul li a{
   color: white;
+  font-weight: normal;
 }
 
 .company_address p{
@@ -316,4 +317,9 @@ h1, h2, h3, h4, h5, h6 {
 .mobilemenu.show{
   display: block;
   animation-delay: 2s;
+}
+
+.gfield_html_formatted{
+  font-size: 12px;
+  text-align: center;
 }
