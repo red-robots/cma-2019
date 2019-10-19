@@ -7,6 +7,8 @@
 
 jQuery(document).ready(function ($) {
 	
+	$('.gfield_html_formatted').css('padding-top', '20px');
+
 	$('.burger').on('click', function(){
 		$(this).toggleClass('clicked');
 		$('.mobilemenu').toggleClass('show');		
