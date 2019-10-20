@@ -67,6 +67,7 @@
               </div>
               <ul class="list-group">
               <?php
+                    $wp_query = null;
                     $post_type = 'location';
                     $args = array(
                         'posts_per_page'   => -1,
@@ -76,11 +77,14 @@
                         'post_status'      => 'publish',
                         //'paged'            => $paged
                     );
-                    $posts = new WP_Query($args);
 
-                    if ( $posts->have_posts() ) {
+                    $wp_query = null;
+                    
+                    $wp_query = new WP_Query($args);
 
-                          while ( $posts->have_posts() ) : $posts->the_post(); 
+                    if ( $wp_query->have_posts() ) {
+
+                          while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
 
                   ?>
                       <li class="list-group-item"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></li>
