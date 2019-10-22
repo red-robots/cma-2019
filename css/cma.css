@@ -467,6 +467,26 @@ h1, h2, h3, h4, h5, h6 {
       }
 }
 
+.sitemap404 .menu-item a {
+    color: #db1c2b;
+}
+
+.sitemap404 .menu-item-has-children {
+    display: inline-block;
+    top: 0;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 135px;
+}
+
+.sitemap404 .menu-item-has-children a {
+    font-weight: bold;
+}
+
+.sitemap404 .sub-menu a {
+    font-weight: normal;
+}
 
 #primaryNav {
     margin: 50px 0 0;

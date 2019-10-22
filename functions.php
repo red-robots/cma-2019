@@ -96,10 +96,14 @@ if( function_exists('acf_add_options_page') ) {
 function custom_login_logo() { 
 ?> 
 <style type="text/css"> 
-body.login div#login h1 a {
- background-image: url(<?php echo get_template_directory_uri(). '/images/section6_logo.png'; ?>);  //Add your own logo image in this url 
-padding-bottom: 30px; 
-} 
+    body.login div#login h1 a {
+        background-image: url(<?php echo get_template_directory_uri(). '/images/section6_logo.png'; ?>);  
+        padding-bottom: 10px; 
+        background-size: contain;
+        width: 100%;
+        height: 80px;
+}
+    } 
 </style>
  <?php 
 } add_action( 'login_enqueue_scripts', 'custom_login_logo' );
