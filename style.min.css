@@ -58,6 +58,7 @@ optgroup{font-weight:bold}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
 button:focus{outline:0}
+#primaryNav{margin:50px 0 0;float:left;width:100%}
 /*!
  * Font Awesome Pro 5.0.6 by @fontawesome - http://fontawesome.com
  * License - http://fontawesome.com/license (Commercial License)
