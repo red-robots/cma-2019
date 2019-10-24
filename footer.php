@@ -7,6 +7,8 @@
     $company_bldg_name = get_field('building_name', 'option');
     $company_address = get_field('building_address', 'option');
   ?>
+
+  
 	
     <footer class="cma-footer" id="colophon" role="contentinfo">
     <div class="container text-left">
@@ -16,11 +18,39 @@
             <?php echo ($company_name) ? $company_name : ''; ?>
           </h4>
           <div>
-            P: <?php echo ($company_phone) ? $company_phone : ''; ?> | E: <a href="mailto:<?php echo ($company_email) ? $company_email : ''; ?>"><?php echo ($company_email) ? $company_email : ''; ?></a>
+            P: <?php echo ($company_phone) ? $company_phone : ''; ?> | E: <a href="mailto:<?php echo ($company_email) ? antispambot($company_email, 1) : ''; ?>"><?php echo ($company_email) ? antispambot($company_email) : ''; ?></a>
           </div>
           <div class="mb-5">
             <div><?php echo ($company_bldg_name) ? $company_bldg_name : ''; ?></div>
             <div class="company_address"><?php echo ($company_address) ? $company_address : ''; ?></div>
+          </div>
+
+
+          <div class="pt-5 mt-5 justify-content-left social_media_desktop fadeInLeft wow" data-wow-delay="0.7s">
+            <div class="">
+                  <ul class="list-group d-flex flex-row">
+                    <?php
+                      $social_media = get_field('social_media', 'option');
+
+                      if($social_media){
+                        foreach($social_media as $social){
+                          $icon = $social['icon'];
+                          $link = $social['link'];
+                    ?>
+                    <li class="list-group-item ">
+                      <a href="<?php echo $link; ?>" target="_blank">
+                        <?php if($icon): ?>
+                        <img src="<?php echo $icon['url']; ?>" alt="">
+                      <?php endif; ?>
+                      </a>
+                    </li>
+                    <?php } // foreach($social_media as $social)
+                    } // if($social_media) ?>               
+                  </ul>
+                </div>
+                <div class="small mt-2">
+                  Copyright <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?>. All Rights Reserved.
+                </div>
           </div>
           
       </div>
@@ -101,32 +131,35 @@
 
       </div> <!-- row -->
       
-      <div class="col-md-8 justify-content-left social_media fadeInLeft wow" data-wow-delay="0.7s">
-        <div class="">
-              <ul class="list-group d-flex flex-row">
-                <?php
-                  $social_media = get_field('social_media', 'option');
+      <div class="social_media_mobile">
+        <div class="pt-5 mt-5 justify-content-center text-center  fadeInLeft wow" data-wow-delay="0.7s">
+            <div class="">
+                  <ul class="list-group d-flex flex-row">
+                    <?php
+                      $social_media = get_field('social_media', 'option');
 
-                  if($social_media){
-                    foreach($social_media as $social){
-                      $icon = $social['icon'];
-                      $link = $social['link'];
-                ?>
-                <li class="list-group-item ">
-                  <a href="<?php echo $link; ?>" target="_blank">
-                    <?php if($icon): ?>
-                    <img src="<?php echo $icon['url']; ?>" alt="">
-                  <?php endif; ?>
-                  </a>
-                </li>
-                <?php } // foreach($social_media as $social)
-                } // if($social_media) ?>               
-              </ul>
-            </div>
-            <div class="small mt-2">
-              Copyright <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?>. All Rights Reserved.
-            </div>
+                      if($social_media){
+                        foreach($social_media as $social){
+                          $icon = $social['icon'];
+                          $link = $social['link'];
+                    ?>
+                    <li class="list-group-item ">
+                      <a href="<?php echo $link; ?>" target="_blank">
+                        <?php if($icon): ?>
+                        <img src="<?php echo $icon['url']; ?>" alt="">
+                      <?php endif; ?>
+                      </a>
+                    </li>
+                    <?php } // foreach($social_media as $social)
+                    } // if($social_media) ?>               
+                  </ul>
+                </div>
+                <div class="small mt-2">
+                  Copyright <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?>. All Rights Reserved.
+                </div>
+        </div>
       </div>
+      
 
     </div>
   </footer>
