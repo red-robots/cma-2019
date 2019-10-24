@@ -67,6 +67,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'open_sanslight';
 }
 
+.cma-paragraph-white p{
+    color: #fff;
+    font-size: 18px;
+    font-family: 'open_sanslight';
+}
+
 .cma-icon-holder{
   margin: 20px 0 30px;
 }
@@ -101,6 +107,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #db1c2b;
 }
 
+a.cma-solid-bottom:hover {
+    color: #db1c2b;
+    background: none;
+    border: none;
+    font-weight: bold;
+    border-bottom: 4px solid black;
+    padding: 0 0 3px 0;
+    font-size: 18px;
+}
+
 .cma-input-btn, .gform_button{
   background: none;
   border: none;
@@ -112,6 +128,20 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   cursor: pointer;
   margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  border-bottom: 4px solid black;
+  padding: 0 0 3px 0;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 auto;
+  color: #db1c2b;
 }
 
 .gform_wrapper .gform_footer {
@@ -167,6 +197,12 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     font-size: 14px;
 }
+
+/*
+.mobilemain .sub-menu a {
+    font-weight: normal;
+}
+*/
 
 .text-bold{
   font-weight: bold;
@@ -283,6 +319,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+.mobilemain .sub-menu a:hover{
+  font-weight: normal;
+  color: #db1c2b;
+}
+
+.list-group-item a:hover {
+    color: #db1c2b;
+}
+
 .main_menu_top{
   position: relative;
 }
@@ -354,6 +399,20 @@ h1, h2, h3, h4, h5, h6 {
         
       }
 
+      input[type="submit"]:hover {
+        background: none;
+        border: none;
+        font-weight: bold;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        border-bottom: 4px solid black;
+        padding: 0 0 3px 0;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 0 auto;
+        color: #db1c2b;
+      }
+
 
 
 }
@@ -400,6 +459,12 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0;
     }
 
+    .cma-paragraph-white p{
+        color: #fff;
+        font-size: 16px;
+        font-family: 'open_sanslight';
+    }
+
     .cma-paragraph-normal {
         font-size: 16px;
         color: #444;
@@ -444,6 +509,20 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer;
         margin: 0 auto;
         
+      }
+
+      input[type="submit"]:hover {
+        background: none;
+        border: none;
+        font-weight: bold;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        border-bottom: 4px solid black;
+        padding: 0 0 3px 0;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 0 auto;
+        color: #db1c2b;
       }
 
       .cma-logo img{

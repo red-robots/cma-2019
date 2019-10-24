@@ -228,6 +228,7 @@
             <?php
                 $row6_title     = get_field('title6');
                 $row6_text      = get_field('description'); 
+                $final_content =  email_obfuscator($row6_text);
                 $row6_icon      = get_field('logo'); 
                 $row6_small     = get_field('small_captions');              
             ?>
@@ -243,7 +244,7 @@
                             <?php echo ($row6_title) ? $row6_title : ''; ?>
                         </h1>
                         <div class="cma-paragraph-normal fadeInUp wow" data-wow-delay="1s">
-                            <?php  echo ($row6_text) ? $row6_text : ''; ?>
+                            <?php  echo ($row6_text) ? $final_content : ''; ?>
                         </div>
 
                         <div class="cma-contact-form col-md-8 cma-center fadeInUp wow" data-wow-delay="1s">

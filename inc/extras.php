@@ -182,3 +182,5 @@ function cma_remove_meta_version(){
     return '';
 }
 add_filter( 'the_generator', 'cma_remove_meta_version' );
+
+
