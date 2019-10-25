@@ -224,7 +224,7 @@ button.menu-toggle {
 	}
   
 	span {
-		@include burger(20px, 3px, 6px, #db1c2b); // red
+		@include burger(29px, 4px, 6px, #db1c2b); // red
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -245,6 +245,14 @@ button.menu-toggle {
 	&:hover {
 		cursor: pointer;
 	}
+}
+
+.burger_label{
+    float: left;
+    margin-left: -45px;
+    margin-top: 13px;
+    font-size:15px;
+    font-weight: bold;
 }
 
 
