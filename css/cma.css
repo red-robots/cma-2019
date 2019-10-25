@@ -397,6 +397,10 @@ input[type="submit"]:hover {
     .social_media_mobile{
       display: none;
     }
+
+    .mobilemenu{
+        display: none;
+      }
 }
 
 
@@ -429,7 +433,7 @@ input[type="submit"]:hover {
 
 
 .mobilemenu{
-  display: block;
+  display: none;
 }
 
 
@@ -484,6 +488,10 @@ input[type="submit"]:hover {
       display: none;
     }
 
+    .mobilemenu{
+        display: none;
+      }
+
 
 }
 
@@ -514,6 +522,10 @@ input[type="submit"]:hover {
       /* overflow-y: auto; */
       padding-bottom: 10px;
   }
+
+  .mobilemenu{
+        display: none;
+      }
 
 }
 
@@ -675,6 +687,14 @@ input[type="submit"]:hover {
         margin-top: 20px;
       }
 
+      .mobilemenu{
+        display: none;
+      }
+
+      .n2-ss-item-content img{
+          width: 120px;
+      }
+
       
 }
 
@@ -744,5 +764,38 @@ input[type="submit"]:hover {
         color: white;
         font-weight: bold;
         left: 136px;        
+    }
+}
+
+@media screen and (max-width: 360px) {
+      .social_media_mobile{
+        display: block;
+      }
+
+      .social_media_desktop{
+        display: none;
+      }
+
+    .mobilemain{
+        padding: 5px 10px 0;
+        /*margin-top: -30px;*/
+    }
+
+    .mobilemain .menu-item-has-children {
+        display: inline-block;
+        top: 0;
+        vertical-align: top;
+        margin-right: 5px;
+        margin-top: 10px;
+        width: 112px;
+    }
+
+    .header_location {
+        width: 120px;
+        position: relative;
+        top: 0;
+        color: white;
+        font-weight: bold;
+        left: 13px;        
     }
 }
