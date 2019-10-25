@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
 
 	$('.burger').on('click', function(){
 		$(this).toggleClass('clicked');
-		$('.mobilemenu').fadeToggle(500).toggleClass('show');		
+		$('.mobilemenu').fadeToggle(500).toggleClass('hide');		
 	});
 	
 

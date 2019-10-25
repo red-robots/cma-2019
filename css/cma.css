@@ -307,7 +307,7 @@ input[type="submit"]:hover {
 }
 
 .mobilemain .menu-item-has-children a{
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .mobilemain .sub-menu{
@@ -372,7 +372,7 @@ input[type="submit"]:hover {
 @media screen and (min-width: 768px){
   .mobilemenu {
       /*background-color: rgba(255, 255, 255, 0.5);*/
-      background-image: linear-gradient(-120deg, rgba(51,52,134,0.5), rgba(210,32,48,0.5));
+      background-image: linear-gradient(-120deg, rgba(5,5,255,0.4), rgba(255,0,0,0.5));
       position: absolute;    
       margin-top: 15px;
       right: -75px;    
@@ -435,7 +435,7 @@ input[type="submit"]:hover {
 
     .mobilemenu {
         /* background-color: rgba(255, 255, 255, 0.5); */
-        background-image: linear-gradient(-120deg, rgba(51,52,134,0.5), rgba(210,32,48,0.5));
+        background-image: linear-gradient(-120deg, rgba(5,5,255,0.4), rgba(255,0,0,0.5));
         position: absolute;
         margin-top: 15px;
         right: 0;
@@ -590,5 +590,5 @@ input[type="submit"]:hover {
 
 
 .mobilemenu{
-  display: none;
+  display: block;
 }
