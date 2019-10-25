@@ -536,7 +536,7 @@ input[type="submit"]:hover {
         /*height: 300px;*/
         width: 100%;
         /*padding: 20px 10px 20px 10px;*/
-        overflow-y: none;
+        /*overflow-y: none;*/
         z-index: 100001;    
         display: block;
     }
@@ -668,7 +668,7 @@ input[type="submit"]:hover {
       
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
       .social_media_mobile{
         display: block;
       }
@@ -677,23 +677,9 @@ input[type="submit"]:hover {
         display: none;
       }
 
-    .mobilemenu {
-        /* background-color: rgba(255, 255, 255, 0.5); */
-        background-image: linear-gradient(-120deg, rgba(5,5,255,0.4), rgba(255,0,0,0.5));
-        position: absolute;
-        /*margin-top: 15px;*/
-        right: 0;
-        /*height: 300px;*/
-        width: 100%;
-        padding: 20px 10px 20px 10px;
-        overflow-y: auto;
-        z-index: 100001;    
-        display: block;
-    }
-
     .mobilemain{
-        padding: 5px 0 0;
-        margin-top: -30px;
+        padding: 5px 10px 0;
+        /*margin-top: -30px;*/
     }
 
     .mobilemain .menu-item-has-children {
@@ -705,13 +691,48 @@ input[type="submit"]:hover {
         width: 112px;
     }
 
+    .header_location {
+        width: 120px;
+        position: relative;
+        top: -285px;
+        color: white;
+        font-weight: bold;
+        left: 530px;
+        /* overflow-y: auto; */
+        /* padding-bottom: 10px; */
+    }
+}
 
-      .header_location{
-          width: 200px;
-          float: right;
-          position: relative;
-          top: -286px;
-          color: white;
-          font-weight: bold;
+
+@media screen and (max-width: 534px) {
+      .social_media_mobile{
+        display: block;
       }
+
+      .social_media_desktop{
+        display: none;
+      }
+
+    .mobilemain{
+        padding: 5px 10px 0;
+        /*margin-top: -30px;*/
+    }
+
+    .mobilemain .menu-item-has-children {
+        display: inline-block;
+        top: 0;
+        vertical-align: top;
+        margin-right: 5px;
+        margin-top: 10px;
+        width: 112px;
+    }
+
+    .header_location {
+        width: 120px;
+        position: relative;
+        top: -251px;
+        color: white;
+        font-weight: bold;
+        left: 136px;        
+    }
 }
