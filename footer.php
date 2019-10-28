@@ -166,7 +166,12 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<style>
+  h1.n2-ss-item-content{
+    font-family: 'open_sanslight', sans-serif;
+    font-size: 2.25rem;
+  }
+</style>
 
 </body>
 </html>
