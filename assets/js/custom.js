@@ -23,6 +23,8 @@ jQuery(document).ready(function ($) {
     }
 	//
 
+	$('h1.n2-ss-item-content').class('font-family', 'open_sanslight').class('font-size', '2.25em');
+
 	$('.burger').on('click', function(){
 		$(this).toggleClass('clicked');
 		$('.mobilemenu').fadeToggle(500).toggleClass('show');		
