@@ -10,10 +10,17 @@
 get_header(); ?>
 
 	<div class="mb-5 ">
-      <?php
-		echo do_shortcode('[smartslider3 slider=3]');
-		?>
-    </div>
+      <?php if(has_post_thumbnail()): 
+        $featured_image     = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );
+        $header_image_text  = get_field('row_1_image_header_text');
+        ?>
+      <div class="n2-section-smartslider text-center header_image_section" >
+            <div class="featured_image " style="background-image: url('<?php echo $featured_image;  ?>');" >
+            </div>
+            <h1 class="header_image_text align-middle"><?php echo ($header_image_text) ? $header_image_text : '';  ?></h1>
+      </div>
+      <?php endif; ?>
+  </div>
 
     <!-- 1st row -->
     <?php
@@ -69,22 +76,34 @@ get_header(); ?>
 
   <!-- 3rd row -->
   <?php  
-  	$row_3_image 	= get_field('row_3_image');
-  	$row_3_text 	= get_field('row_3_text');
-  	$row_3_offers 	= get_field('row_3_offers');
+  	$row_3_image_text = get_field('row_3_image_header_text');
+    $row_3_image     = get_field('row_3_image');
+  	$row_3_text      = get_field('row_3_text');
+  	$row_3_offers    = get_field('row_3_offers');
   ?>
   <div class=" mb-5">
     <div class="container text-center">
       <div class="justify-content-center">
-        <div class="col-md-8 cma-center">
+        <div class="col-md-10 cma-center">
           <div class="fadeIn wow" data-wow-delay="0.7s">
-            <?php if($row_3_image): ?>
-            <img src="<?php echo $row_3_image['url'] ?>" alt="" class="img-fluid">
-        	<?php endif; ?>
+            <?php if($row_3_image): 
+                $sub_featured_image = $row_3_image['url'];
+              ?>
+              <div class="header_image_section">
+                <div class="sub_featured_image" style="background-image: url('<?php  echo $sub_featured_image; ?>');">                
+                </div>
+                <h1 class="header_image_text"><?php echo ($row_3_image_text) ? $row_3_image_text : '';  ?></h1>
+              </div>
+              
+              <!--
+              <img src="<?php //echo $row_3_image['url'] ?>" alt="" class="img-fluid">
+            -->
+            <?php endif; ?>
           </div>
+        </div>
+        <div class="col-md-8 cma-center">          
           <div class="cma-paragraph-normal fadeInUp wow" data-wow-delay="1s">
-            <?php echo ($row_3_text) ? $row_3_text : '';  ?>
- 
+            <?php echo ($row_3_text) ? $row_3_text : '';  ?> 
           </div>
           <div class="row pt-4 pb-3">
 			<?php if($row_3_offers): $x = 0; ?>
