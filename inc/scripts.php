@@ -31,12 +31,13 @@ function bellaworks_scripts() {
 			true 
 		);
 
-	wp_enqueue_script( 
+	/*wp_enqueue_script( 
 		'font-awesome', 
 		get_template_directory_uri() . '/assets/svg-with-js/js/fontawesome-all.js', 
 		array(), '20180424', 
 		true 
 	);
+	*/
 
 
 

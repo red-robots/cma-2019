@@ -12,6 +12,17 @@ jQuery(document).ready(function ($) {
 	if (window.matchMedia('(max-width: 767px)').matches) {
         $('.gform_button').css('width', '39%').css('margin', '0');
     }
+
+    var header_height = $('.n2-section-smartslider').height();
+    console.log(header_height);
+
+    if(header_height){
+    	$('.mobilemenu').height(header_height);
+    } else {
+    	$('.mobilemenu').height(562);
+    }
+
+    
 	//
 
 	$('.burger').on('click', function(){

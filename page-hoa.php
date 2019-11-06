@@ -14,10 +14,16 @@ get_header(); ?>
         $featured_image     = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );
         $header_image_text  = get_field('row_1_image_header_text');
         ?>
-      <div class="n2-section-smartslider text-center header_image_section" >
-            <div class="featured_image " style="background-image: url('<?php echo $featured_image;  ?>');" >
-            </div>
-            <h1 class="header_image_text align-middle"><?php echo ($header_image_text) ? $header_image_text : '';  ?></h1>
+      <div class="n2-section-smartslider text-center " >      
+            <div class="header_image_section fadeIn wow" data-wow-delay="0.5s">
+              <div class="featured_image " style="background-image: url('<?php echo $featured_image;  ?>');" >       
+              </div>     
+              <div class="header_image_text fadeIn wow" data-wow-delay="1s">
+                  <h1 class="align-middle " >
+                    <?php echo ($header_image_text) ? $header_image_text : '';  ?>                
+                  </h1>
+              </div>
+            </div>  
       </div>
       <?php endif; ?>
   </div>
@@ -29,11 +35,11 @@ get_header(); ?>
     ?>
     <div class=" mb-5 justify-content-center">
       <div class="col-md-7 text-center" style="margin: 0 auto;">
-      	<div class="fadeInUp wow" data-wow-delay="0.7s">
+      	<div class="fadeInUp wow" data-wow-delay="0.5s">
       		<h1 class="cma-title-red"><?php echo ($row1_title) ? $row1_title : ''; ?></h1>
       	</div>
         
-        <div class="fadeInUp wow" data-wow-delay="1s">
+        <div class="fadeInUp wow" data-wow-delay="0.7s">
             <?php echo ($row1_text) ? $row1_text : ''; ?>
         </div>
         
@@ -81,31 +87,27 @@ get_header(); ?>
   	$row_3_text      = get_field('row_3_text');
   	$row_3_offers    = get_field('row_3_offers');
   ?>
+
+  <div class="text-center header_image_section fadeIn wow" data-wow-delay="0.5s">        
+            <div class="featured_image " style="background-image: url('<?php echo $row_3_image['url'];  ?>');" >       
+            </div>     
+            <div class="header_image_text fadeIn wow" data-wow-delay="0.7s">
+              <h1 class=" align-middle">
+                <?php echo ($row_3_image_text) ? $row_3_image_text : '';  ?>
+              </h1> 
+            </div>      
+  </div>
+
+
   <div class=" mb-5">
     <div class="container text-center">
       <div class="justify-content-center">
-        <div class="col-md-10 cma-center">
-          <div class="fadeIn wow" data-wow-delay="0.7s">
-            <?php if($row_3_image): 
-                $sub_featured_image = $row_3_image['url'];
-              ?>
-              <div class="header_image_section">
-                <div class="sub_featured_image" style="background-image: url('<?php  echo $sub_featured_image; ?>');">                
-                </div>
-                <h1 class="header_image_text"><?php echo ($row_3_image_text) ? $row_3_image_text : '';  ?></h1>
-              </div>
-              
-              <!--
-              <img src="<?php //echo $row_3_image['url'] ?>" alt="" class="img-fluid">
-            -->
-            <?php endif; ?>
-          </div>
-        </div>
-        <div class="col-md-8 cma-center">          
-          <div class="cma-paragraph-normal fadeInUp wow" data-wow-delay="1s">
+        
+        <div class="col-md-8 cma-center pt-5">          
+          <div class="cma-paragraph-normal fadeInUp wow" data-wow-delay="0.5s">
             <?php echo ($row_3_text) ? $row_3_text : '';  ?> 
           </div>
-          <div class="row pt-4 pb-3">
+          <div class="row pt-4 ">
 			<?php if($row_3_offers): $x = 0; ?>
 				<?php foreach($row_3_offers as $offers): ?>
 					<?php
@@ -284,7 +286,7 @@ get_header(); ?>
           	<?php endif; ?>
         </div>
 
-        <div class="mt-4 fadeInUp wow" data-wow-delay="1.5s">
+        <div class="mt-4 fadeInUp wow" data-wow-delay="1s">
           <a href="<?php echo ($row_6_button_link)  ? $row_6_button_link : '#'; ?>" class="btn-gray"><?php echo ($row_6_button_title) ? $row_6_button_title : 'Read More'; ?></a>
         </div>
 
@@ -304,7 +306,7 @@ get_header(); ?>
   <div class="pt-3 pb-5" id="request_information">
     <div class="container text-center">
       <div class="col-md-8 cma-center">  
-      	<div class="fadeInUp wow" data-wow-delay="0.7s">     
+      	<div class="fadeInUp wow" data-wow-delay="0.9s">     
 	        <h1 class="cma-title-normal">
 	          <?php echo ($row_7_title) ? $row_7_title : ''; ?>
 	        </h1>
