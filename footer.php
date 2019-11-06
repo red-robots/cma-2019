@@ -1,11 +1,14 @@
 	</div><!-- #content -->
 
   <?php  
-    $company_name = get_field('company_name', 'option');
-    $company_email = get_field('email_address', 'option');
-    $company_phone = get_field('phone', 'option');
-    $company_bldg_name = get_field('building_name', 'option');
-    $company_address = get_field('building_address', 'option');
+    $company_name       = get_field('company_name', 'option');
+    $company_email      = get_field('email_address', 'option');
+    $company_phone      = get_field('phone', 'option');
+    $company_bldg_name  = get_field('building_name', 'option');
+    $company_address    = get_field('building_address', 'option');
+
+    $request_info       = get_field('request_information_text', 'option');
+    $request_info_url   = get_field('request_information_url', 'option');
   ?>
 
   
@@ -59,7 +62,7 @@
 
       <div class="col-md-5  fadeInRight wow" data-wow-delay="0.5s">
         <div class=" mb-3" >
-          <span class="cma-solid-bottom">Request Information</span>
+          <a href="<?php echo ($request_info_url) ?  $request_info_url : ''; ?>" class="cma-solid-bottom"><?php echo ($request_info) ? $request_info : '';  ?></a>
         </div>
         <div class="row">
 
