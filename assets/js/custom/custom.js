@@ -22,6 +22,8 @@ jQuery(document).ready(function ($) {
     	$('.mobilemenu').height(562);
     }
 
+    $('.n2-style-9f06581096b62fd6b924817df32eb12e-heading').css('right', '47px');
+
     
 	//
 
