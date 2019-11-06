@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
     }
 
     var header_height = $('.n2-section-smartslider').height();
-    console.log(header_height);
+    //console.log(header_height);
 
     if(header_height){
     	$('.mobilemenu').height(header_height);

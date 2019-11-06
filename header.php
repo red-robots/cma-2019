@@ -42,7 +42,12 @@
 		 					<span></span>
 		 				</div>
 
-		 				<div class="mobilemenu">		 					
+		 				
+
+
+
+		 			</div><!-- wrapper -->
+		 			<div class="mobilemenu">		 					
 		 					<?php 
 		 					
 		 					wp_nav_menu( array( 
@@ -79,10 +84,6 @@
 		 					</div>
 							
 		 				</div>
-
-
-
-		 			</div><!-- wrapper -->
 		 		</div>
 
 		 		
