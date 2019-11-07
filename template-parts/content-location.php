@@ -37,8 +37,10 @@
         <?php if($row_2_title || $row_2_text): ?>
         <div class=" mb-5 justify-content-center">
           <div class="col-md-8 text-center" style="margin: 0 auto;">
-            <h1 class="cma-title-red"><?php echo ($row_2_title) ? $row_2_title : ''; ?></h1>
-            <div>
+            <div class="fadeInUp wow" data-wow-delay="0.5s">
+                <h1 class="cma-title-red"><?php echo ($row_2_title) ? $row_2_title : ''; ?></h1>
+            </div>            
+            <div class="fadeInUp wow" data-wow-delay="0.7s">
               <p class="cma-paragraph-normal">
                 <?php echo ($row_2_text) ? $row_2_text : ''; ?>
               </p>
@@ -55,10 +57,10 @@
       <?php if($row_3_background_image || $row_3_title): ?>  
       <div class="">
         <div class=" text-center">
-          <div class="header_image_section fadeIn wow" data-wow-delay="0.5s">
+          <div class="header_image_section fadeIn wow" data-wow-delay="0.6s">
               <div class="featured_image " style="background-image: url('<?php echo $row_3_background_image;  ?>');" >       
               </div>     
-              <div class="header_image_text fadeIn wow" data-wow-delay="0.7s">
+              <div class="header_image_text fadeIn wow" data-wow-delay="0.9s">
                   <h1 class="align-middle " >
                     <?php echo ($row_3_title) ? $row_3_title : '';  ?>                
                   </h1>
@@ -76,7 +78,7 @@
         <div class="cma-main-body " id="team_cma">
             <div class="container text-center pt-5 pb-5">
               <div class="col-md-8 cma-center">
-                <div class="row  mb-4">
+                <div class="row  mb-4 fadeInUp wow" data-wow-delay="0.5s">
                     <?php if($row_4_teams): ?>
                         <?php foreach($row_4_teams as $team): ?>
                         <div class="col-md-6 mt-5">
@@ -112,11 +114,13 @@
         ?>
         <div class="pt-5 mb-5 justify-content-center">
           <div class="col-md-6 text-center" style="margin: 0 auto;">
-            <h1 class="cma-title-red"><?php echo ($row_5_title) ? $row_5_title : ''; ?></h1>
+            <div class="fadeInUp wow" data-wow-delay="0.5s">
+                <h1 class="cma-title-red"><?php echo ($row_5_title) ? $row_5_title : ''; ?></h1>
+            </div>            
             <div class="row mt-5">
                 <?php if($row_5_locations): ?>
                     <?php foreach($row_5_locations as $location): ?>
-                        <div class="col">
+                        <div class="col fadeInUp wow" data-wow-delay="0.7s">
                           <div class="text-bold">
                             <?php echo ($location['location_name']) ?  $location['location_name'] : ''; ?>
                           </div>
@@ -149,22 +153,24 @@
         <div class=" cma-bg-red ">
           <div class="justify-content-center">
             <div class="col-md-8 mt-4" style="margin: 0 auto">
-              <h1  class="text-center">
-                <?php echo ($row_6_title) ? $row_6_title : ''; ?>
-              </h1>
+                <div class="fadeInUp wow" data-wow-delay="0.8s">
+                    <h1  class="text-center">
+                        <?php echo ($row_6_title) ? $row_6_title : ''; ?>
+                    </h1>
+                </div>
             </div>
           </div>
           
           <div class="container">
             <div class="mb-4">
               <div class="col-md-9 cma-center text-center ">
-                  <div>
+                  <div class="fadeInUp wow" data-wow-delay="0.9s">
                     <p class="cma-paragraph-normal text-white">
                       <?php echo ($row_6_text) ? $row_6_text : ''; ?>  
                     </p>
                   </div>
 
-                  <div>
+                  <div class="fadeInUp wow" data-wow-delay="1s">
                     <a href="<?php echo ($row_6_link_url) ? $row_6_link_url : ''; ?>" class="cma-solid-bottom-white">
                       <?php echo ($row_6_link_text) ? $row_6_link_text : ''; ?>
                     </a>
