@@ -1006,3 +1006,35 @@ h1.n2-ss-item-content{
   margin-right: 20px;
 }
 
+a.team_cma_link{
+  color: #333;
+  text-decoration: underline;
+}
+
+a.team_cma_link:hover{
+  color: #db1c2b;
+  text-decoration: none;
+}
+
+.cma-solid-bottom-white{
+  color: white;
+  background: none;
+  border: none;
+  font-weight: bold;
+  border-bottom: 4px solid black;
+  padding: 0 0 3px 0;
+  font-size: 18px;
+}
+
+.cma-solid-bottom-white:hover{
+  color: black;
+  background: none;
+  border: none;
+  font-weight: bold;
+  border-bottom: 4px solid white;
+  padding: 0 0 3px 0;
+  font-size: 18px;
+}
+
+
+
