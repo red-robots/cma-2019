@@ -137,7 +137,7 @@
       <div class="social_media_mobile">
         <div class="pt-5 mt-5 justify-content-center text-center  fadeInLeft wow" data-wow-delay="0.7s">
             <div class="">
-                  <ul class="list-group d-flex flex-row">
+                  <ul class="list-group d-flex flex-row justify-content-center">
                     <?php
                       $social_media = get_field('social_media', 'option');
 

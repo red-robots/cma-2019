@@ -36,11 +36,11 @@
         ?>
         <?php if($row_2_title || $row_2_text): ?>
         <div class=" mb-5 justify-content-center">
-          <div class="col-md-8 text-center" style="margin: 0 auto;">
+          <div class="col-md-10 text-center" style="margin: 0 auto;">
             <div class="fadeInUp wow" data-wow-delay="0.5s">
                 <h1 class="cma-title-red"><?php echo ($row_2_title) ? $row_2_title : ''; ?></h1>
             </div>            
-            <div class="fadeInUp wow" data-wow-delay="0.7s">
+            <div class="text-center fadeInUp wow" data-wow-delay="0.7s">
               <p class="cma-paragraph-normal">
                 <?php echo ($row_2_text) ? $row_2_text : ''; ?>
               </p>
@@ -165,9 +165,9 @@
             <div class="mb-4">
               <div class="col-md-9 cma-center text-center ">
                   <div class="fadeInUp wow" data-wow-delay="0.9s">
-                    <p class="cma-paragraph-normal text-white">
+                    <div class="cma-paragraph-normal text-white">
                       <?php echo ($row_6_text) ? $row_6_text : ''; ?>  
-                    </p>
+                    </div>
                   </div>
 
                   <div class="fadeInUp wow" data-wow-delay="1s">

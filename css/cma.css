@@ -666,8 +666,9 @@ input[type="submit"]:hover {
     .cma-paragraph-normal {
         font-size: 16px;
         color: #444;
-        margin: 20px 0;
+        margin: 20px auto;
         padding: 10px;
+
     }
 
     .h1, h1 {
@@ -767,6 +768,11 @@ input[type="submit"]:hover {
 @media screen and (max-width: 700px) {
       .social_media_mobile{
         display: block;
+      }
+
+      p{
+        width: 90%;
+        margin: 0 auto;
       }
 
       .social_media_desktop{
