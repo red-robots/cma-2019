@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
     }
 
     
-
+    $('h1.n2-ss-item-content').css('text-shadow', '2px 2px #333');
     
 	//
 

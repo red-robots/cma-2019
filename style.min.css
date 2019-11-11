@@ -1915,3 +1915,4 @@ a.team_cma_link{color:#333;border-bottom:1px solid #333}
 a.team_cma_link:hover{color:#db1c2b;text-decoration:none;border-bottom:0}
 .cma-solid-bottom-white{color:white;background:0;border:0;font-weight:bold;border-bottom:4px solid black;padding:0 0 3px 0;font-size:18px}
 .cma-solid-bottom-white:hover{color:black;background:0;border:0;font-weight:bold;border-bottom:4px solid white;padding:0 0 3px 0;font-size:18px}
+h1.n2-ss-item-content{text-shadow:2px 2px #333}

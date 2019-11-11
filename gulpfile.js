@@ -196,6 +196,7 @@ gulp.task('styles', function () {
  * 		3. Renames the JS file with suffix .min.js
  * 		4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
+ 
 gulp.task( 'vendorsJs', function() {
 	//gulp.src( jsVendorSRC )
 	gulp.src( [
@@ -218,6 +219,7 @@ gulp.task( 'vendorsJs', function() {
 		.pipe( gulp.dest( jsVendorDestination ) )
 		.pipe( notify( { message: 'TASK: "vendorsJs" Completed!', onLast: true } ) );
 });
+
 
 
 /**
