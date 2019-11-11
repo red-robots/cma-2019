@@ -18,14 +18,14 @@
             ?>
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-8 text-center fadeIn wow" data-wow-delay="0.7s">
-                    <h1 class="cma-title-red " ><?php  echo ($row1_title) ? $row1_title : ''; ?></h1>
+                    <h1 class="cma-title-red " ><?php  echo ($row1_title) ? esc_html($row1_title) : ''; ?></h1>
                     <div class="cma-paragraph-normal " >
-                        <?php echo ($row1_text) ? $row1_text : ''; ?>                        
+                        <?php echo ($row1_text) ? ($row1_text) : ''; ?>                        
                     </div>  
                     <div>
                         <?php if($row1_btn_link): ?>
-                        <a href="<?php echo $row1_btn_link; ?>" class="cma-solid-bottom">
-                            <?php echo $row1_btn_text; ?>
+                        <a href="<?php echo esc_url($row1_btn_link); ?>" class="cma-solid-bottom">
+                            <?php echo esc_html($row1_btn_text); ?>
                         </a>
                         <?php endif; ?>
                     </div>  
@@ -41,7 +41,7 @@
                           <div class="justify-content-center fadeInUp wow" data-wow-delay="1s">
                             <div class="col-md-8 mb-4 mt-4" style="margin: 0 auto">
                                 <h1  class="text-center">
-                                    <?php echo ($row2_title) ? $row2_title : ''; ?>
+                                    <?php echo ($row2_title) ? esc_html($row2_title) : ''; ?>
                                 </h1>
                             </div>
                           </div>
@@ -70,7 +70,7 @@
                                                         <?php if( get_field('services_thumbnail_image') ): ?>
                                                             <?php $image = get_field('services_thumbnail_image'); ?>
                                                             <?php if( $image ): ?>
-                                                                <img src="<?php echo $image['url']; ?>" alt="" class="img-circle">
+                                                                <img src="<?php echo esc_url($image['url']); ?>" alt="" class="img-circle">
                                                             <?php endif; ?>
                                                         <?php endif; ?>
                                                         <div class="mt-2">
@@ -103,17 +103,17 @@
                     <div class="justify-content-center">
                         <div class="col-md-8 cma-center " >
                             <h1 class="cma-title-red mb-4 fadeInUp wow" data-wow-delay="0.2s">
-                                <?php echo ($row3_title) ? $row3_title : ''; ?>
+                                <?php echo ($row3_title) ? esc_html($row3_title) : ''; ?>
                             </h1 >
 
                             <div class="cma-paragraph-normal fadeInUp wow" data-wow-delay="0.4s">
-                                <?php  echo ($row3_text) ? $row3_text : ''; ?>
+                                <?php  echo ($row3_text) ? ($row3_text) : ''; ?>
                             </div>
 
                             <div class="mt-4 mb-4 fadeInUp wow" data-wow-delay="0.8s">
                                     <?php if($row3_btn_link): ?>
-                                    <a href="<?php echo $row3_btn_link; ?>" class="cma-solid-bottom">
-                                        <?php echo $row3_btn_text; ?>
+                                    <a href="<?php echo esc_url($row3_btn_link); ?>" class="cma-solid-bottom">
+                                        <?php echo esc_html($row3_btn_text); ?>
                                     </a>
                                     <?php endif;  ?>
                             </div>
@@ -133,7 +133,7 @@
                 <div class="container text-center pb-5 ">
                     <div class="col-md-8 cma-center  pt-5">
                         <h1 class="cma-title-white pb-4 fadeInUp wow" data-wow-delay="0.2s">
-                            <?php echo ($row4_title) ? $row4_title : ''; ?>
+                            <?php echo ($row4_title) ? esc_html($row4_title) : ''; ?>
                         </h1>
                         <div class="cma-paragraph-white text-white fadeInUp wow" data-wow-delay="0.5s">
                               <?php echo ($row4_text) ? $row4_text : ''; ?>
@@ -154,14 +154,14 @@
                             <div class="col-sm-4 fadeInUp wow" data-wow-delay="<?php echo ($x / 5) . 's'; ?>">
                                 <div class="cma-icon-holder">
                                     <?php if($feature_icon): ?>
-                                    <img src="<?php echo $feature_icon['url']; ?>" alt="<?php echo $feature_title; ?>">
+                                    <img src="<?php echo esc_url($feature_icon['url']); ?>" alt="<?php echo esc_html($feature_title); ?>">
                                     <?php endif; ?>
                                 </div>
                                 <div class="cma-sub-title text-white">
-                                  <?php echo ($feature_title) ?  $feature_title : ''; ?>
+                                  <?php echo ($feature_title) ?  esc_html($feature_title) : ''; ?>
                                 </div>
                                 <p class="cma-paragraph-white" style="margin-top: 10px;">
-                                  <?php echo ($feature_desc) ?  $feature_desc : ''; ?>
+                                  <?php echo ($feature_desc) ?  esc_html($feature_desc) : ''; ?>
                                 </p>
                             </div>
 
@@ -184,7 +184,7 @@
                 <div class="container text-center">
                     <div class="col-md-8 cma-center fadeInUp wow" data-wow-delay="0.5s">
                         <h1 class="cma-title-red">
-                            <?php echo ($row5_title) ? $row5_title : ''; ?>
+                            <?php echo ($row5_title) ? esc_html($row5_title) : ''; ?>
                         </h1>
                         <p class="cma-paragraph-why">
                             <?php  echo ($row5_text) ? $row5_text : ''; ?>
@@ -206,11 +206,11 @@
                     <div class="cma-center cma-why-container fadeInUp wow" data-wow-delay="<?php echo ($x / 5). 's'; ?>">
                         <div class="cma-icon-black">
                             <?php if($approach_icon): ?>
-                            <img src="<?php echo $approach_icon['url'];  ?>" alt="<?php echo ($approach_title) ? $approach_title : ''; ?>">
+                            <img src="<?php echo esc_html($approach_icon['url']);  ?>" alt="<?php echo ($approach_title) ? $approach_title : ''; ?>">
                         <?php endif; ?>
                         </div>
                         <div class="cma-title-dark">
-                            <?php echo ($approach_title) ? $approach_title : ''; ?>
+                            <?php echo ($approach_title) ? esc_html($approach_title) : ''; ?>
                         </div>
                         <p class="cma-paragraph-why">
                             <?php echo ($approach_text) ? $approach_text : ''; ?>
@@ -237,11 +237,11 @@
                     <div class="col-md-8 cma-center">
                         <div class="cma-logo fadeInUp wow" data-wow-delay="0.5s">
                             <?php if($row6_icon): ?>
-                            <img src="<?php echo $row6_icon['url']; ?>" alt="">
+                            <img src="<?php echo esc_url($row6_icon['url']); ?>" alt="">
                             <?php endif; ?>
                         </div>
                         <h1 class="cma-title-normal fadeInUp wow" data-wow-delay="0.7s">
-                            <?php echo ($row6_title) ? $row6_title : ''; ?>
+                            <?php echo ($row6_title) ? esc_html($row6_title) : ''; ?>
                         </h1>
                         <div class="cma-paragraph-normal fadeInUp wow" data-wow-delay="1s">
                             <?php  echo ($row6_text) ? $final_content : ''; ?>

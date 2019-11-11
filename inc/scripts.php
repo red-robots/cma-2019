@@ -8,8 +8,8 @@ function bellaworks_scripts() {
     
 	wp_enqueue_style( 'bellaworks-style', get_stylesheet_uri() );
 
-	wp_register_style( 'cma_style', get_template_directory_uri() . '/css/cma.css', array(), '', false);
-    wp_enqueue_style( 'cma_style');
+	//wp_register_style( 'cma_style', get_template_directory_uri() . '/css/cma.css', array(), '', false);
+    //wp_enqueue_style( 'cma_style');
 
 	wp_deregister_script('jquery');
 		wp_register_script('jquery', get_template_directory_uri() .'/assets/js/jquery-3.4.1.min.js', false, '3.4.1', true);

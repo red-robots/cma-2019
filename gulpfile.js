@@ -33,9 +33,9 @@ var styleDestination    = './'; // Path to place the compiled CSS file.
 								// Defualt set to root folder.
 
 
-var styleCustomSRC            = './assets/sass/custom/*.scss'; // Path to main .scss file.
-var styleCustomDestination    = './css'; // Path to place the compiled CSS file.
-var styleCustomFile           = 'cma';  
+//var styleCustomSRC            = './assets/sass/custom/*.scss'; // Path to main .scss file.
+//var styleCustomDestination    = './css'; // Path to place the compiled CSS file.
+//var styleCustomFile           = 'cma';  
                                 // Defualt set to root folder.
 
 var jsVendorSRC         = './assets/js/vendors/*.js'; // Path to JS vendors folder.

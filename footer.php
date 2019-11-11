@@ -18,13 +18,13 @@
       <div class="row">
         <div class="col-md-7 fadeInLeft wow" data-wow-delay="0.5s">
           <h4 class="cma-title-red text-bold">
-            <?php echo ($company_name) ? $company_name : ''; ?>
+            <?php echo ($company_name) ? esc_html($company_name) : ''; ?>
           </h4>
           <div>
-            P: <?php echo ($company_phone) ? $company_phone : ''; ?> | E: <a href="mailto:<?php echo ($company_email) ? antispambot($company_email, 1) : ''; ?>"><?php echo ($company_email) ? antispambot($company_email) : ''; ?></a>
+            P: <?php echo ($company_phone) ? esc_html($company_phone) : ''; ?> | E: <a href="mailto:<?php echo ($company_email) ? antispambot($company_email, 1) : ''; ?>"><?php echo ($company_email) ? esc_html($company_email) : ''; ?></a>
           </div>
           <div class="mb-5">
-            <div><?php echo ($company_bldg_name) ? $company_bldg_name : ''; ?></div>
+            <div><?php echo ($company_bldg_name) ? esc_html($company_bldg_name) : ''; ?></div>
             <div class="company_address"><?php echo ($company_address) ? $company_address : ''; ?></div>
           </div>
 
@@ -41,9 +41,9 @@
                           $link = $social['link'];
                     ?>
                     <li class="list-group-item ">
-                      <a href="<?php echo $link; ?>" target="_blank">
+                      <a href="<?php echo ($link) ? esc_url($link) : ''; ?>" target="_blank">
                         <?php if($icon): ?>
-                        <img src="<?php echo $icon['url']; ?>" alt="">
+                        <img src="<?php echo esc_url($icon['url']); ?>" alt="">
                       <?php endif; ?>
                       </a>
                     </li>
@@ -62,7 +62,7 @@
 
       <div class="col-md-5  fadeInRight wow" data-wow-delay="0.5s">
         <div class=" mb-3" >
-          <a href="<?php echo ($request_info_url) ?  $request_info_url : ''; ?>" class="cma-solid-bottom"><?php echo ($request_info) ? $request_info : '';  ?></a>
+          <a href="<?php echo ($request_info_url) ?  esc_url($request_info_url) : ''; ?>" class="cma-solid-bottom"><?php echo ($request_info) ? esc_html($request_info) : '';  ?></a>
         </div>
         <div class="row">
 
@@ -83,7 +83,7 @@
             foreach ( $lists as $column) {
                 echo '<div class="col-md-4 col-6"><ul class="list-group">';
                 foreach ($column as $item) {
-                    echo '<li class="list-group-item"><a href="'. $item['url'] .'">' . $item['title'] . '</a></li>';
+                    echo '<li class="list-group-item"><a href="'. esc_url($item['url']) .'">' . esc_html($item['title']) . '</a></li>';
                 }
                 echo '</ul></div>';
             }
@@ -111,14 +111,11 @@
                         //'paged'            => $paged
                     );
 
-                    $wp_query = null;
-                    
+                    $wp_query = null;                    
                     $wp_query = new WP_Query($args);
 
                     if ( $wp_query->have_posts() ) {
-
                           while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
-
                   ?>
                       <li class="list-group-item"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></li>
                 <?php     endwhile; wp_reset_postdata();
@@ -147,9 +144,9 @@
                           $link = $social['link'];
                     ?>
                     <li class="list-group-item ">
-                      <a href="<?php echo $link; ?>" target="_blank">
+                      <a href="<?php echo ($link) ? esc_url($link) : ''; ?>" target="_blank">
                         <?php if($icon): ?>
-                        <img src="<?php echo $icon['url']; ?>" alt="">
+                        <img src="<?php echo esc_url($icon['url']); ?>" alt="">
                       <?php endif; ?>
                       </a>
                     </li>

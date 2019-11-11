@@ -766,13 +766,14 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 700px) {
-      .social_media_mobile{
-        display: block;
-      }
 
       p{
         width: 90%;
         margin: 0 auto;
+      }
+      
+      .social_media_mobile{
+        display: block;
       }
 
       .social_media_desktop{
